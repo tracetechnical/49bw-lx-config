@@ -58,7 +58,7 @@
             "DS Hall": 1024,
             "US Hall": 1024
           }
-        }
+        },
         "All Off": {
           "dimmerGroupLevels": {
             "Porch": 0,
@@ -66,7 +66,6 @@
             "US Hall": 0
           }
         },
-        
         "Dim": {
           "dimmerGroupLevels": {
             "Porch": 10,
