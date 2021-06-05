@@ -30,25 +30,25 @@
           "id": 1,
           "name": "DS Hall",
           "dmxPairIdx": 20,
-          "groupName": "DS Hall"
+          "groupName": "Downstairs Hall"
         },
         {
           "id": 2,
           "name": "US Hall 1",
           "dmxPairIdx": 21,
-          "groupName": "US Hall"
+          "groupName": "Upstairs Hall"
         },
         {
           "id": 3,
           "name": "US Hall 2",
           "dmxPairIdx": 22,
-          "groupName": "US Hall"
+          "groupName": "Upstairs Hall"
         },
         {
           "id": 4,
           "name": "US Hall 3",
           "dmxPairIdx": 23,
-          "groupName": "US Hall"
+          "groupName": "Upstairs Hall"
         }
       ],
       "roomPresets": {
