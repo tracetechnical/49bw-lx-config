@@ -55,22 +55,22 @@
         "All On": {
           "dimmerGroupLevels": {
             "Porch": 1024,
-            "DS Hall": 1024,
-            "US Hall": 1024
+            "Downstairs Hall": 1024,
+            "Upstairs Hall": 1024
           }
         },
         "All Off": {
           "dimmerGroupLevels": {
             "Porch": 0,
-            "DS Hall": 0,
-            "US Hall": 0
+            "Downstairs Hall": 0,
+            "Upstairs Hall": 0
           }
         },
         "Dim": {
           "dimmerGroupLevels": {
             "Porch": 10,
-            "DS Hall": 10,
-            "US Hall": 10
+            "Downstairs Hall": 10,
+            "Upstairs Hall": 10
           }
         }
       }
