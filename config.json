@@ -1,337 +1,339 @@
-[
-  {
-    "id": 0,
-    "name": "Porch",
-    "switches": [],
-    "dimmerGroups": {
-      "All": {
-        "groupIdx": 0,
-        "level": 0
+{
+  "rooms": [
+    {
+      "id": 0,
+      "name": "Porch",
+      "switches": [],
+      "dimmerGroups": {
+        "All": {
+          "groupIdx": 0,
+          "level": 0
+        }
+      },
+      "lights": [
+        {
+          "id": 0,
+          "name": "Porch",
+          "dmxPairIdx": 1,
+          "groupName": "All"
+        }
+      ],
+      "roomPresets": {
+        "All On": {
+          "dimmerGroupLevels": {
+            "Porch": 1024
+          }
+        }
       }
     },
-    "lights": [
-      {
-        "id": 0,
-        "name": "Porch",
-        "dmxPairIdx": 1,
-        "groupName": "All"
+    {
+      "id": 1,
+      "name": "Living Room",
+      "switches": [
+        {
+          "channel": 1,
+          "name": "Living Up",
+          "action": "TOGGLE_UP"
+        },
+        {
+          "channel": 2,
+          "name": "Living Down",
+          "action": "TOGGLE_DOWN"
+        }
+      ],
+      "dimmerGroups": {
+        "TV": {
+          "groupIdx": 1,
+          "level": 0
+        },
+        "Around TV": {
+          "groupIdx": 2,
+          "level": 0
+        },
+        "Sofa": {
+          "groupIdx": 3,
+          "level": 0
+        }
+      },
+      "lights": [
+        {
+          "id": 0,
+          "name": "Front Left",
+          "dmxPairIdx": 2,
+          "groupName": "Around TV"
+        },
+        {
+          "id": 1,
+          "name": "Front Right",
+          "dmxPairIdx": 5,
+          "groupName": "Sofa"
+        },
+        {
+          "id": 2,
+          "name": "Mid Left",
+          "dmxPairIdx": 3,
+          "groupName": "TV"
+        },
+        {
+          "id": 3,
+          "name": "Mid Right",
+          "dmxPairIdx": 6,
+          "groupName": "Sofa"
+        },
+        {
+          "id": 4,
+          "name": "Rear Left",
+          "dmxPairIdx": 4,
+          "groupName": "Around TV"
+        },
+        {
+          "id": 5,
+          "name": "Rear Right",
+          "dmxPairIdx": 7,
+          "groupName": "Sofa"
+        }
+      ],
+      "roomPresets": {
+        "All On": {
+          "dimmerGroupLevels": {
+            "Around TV": 1024,
+            "TV": 1024,
+            "Sofa": 1024
+          }
+        },
+        "Dim": {
+          "dimmerGroupLevels": {
+            "Around TV": 10,
+            "TV": 10,
+            "Sofa": 10
+          }
+        },
+        "All Off": {
+          "dimmerGroupLevels": {
+            "Around TV": 0,
+            "TV": 0,
+            "Sofa": 0
+          }
+        },
+        "TV": {
+          "dimmerGroupLevels": {
+            "Around TV": 100,
+            "TV": 0,
+            "Sofa": 100
+          }
+        },
+        "Reading": {
+          "dimmerGroupLevels": {
+            "Sofa": 100
+          }
+        }
       }
-    ],
-    "roomPresets": {
-      "All On": {
-        "dimmerGroupLevels": {
-          "Porch": 1024
+    },
+    {
+      "id": 2,
+      "name": "Dining Room",
+      "switches": [
+        {
+          "channel": 3,
+          "name": "Dining Up",
+          "action": "TOGGLE_UP"
+        },
+        {
+          "channel": 4,
+          "name": "Dining Down",
+          "action": "TOGGLE_DOWN"
+        }
+      ],
+      "dimmerGroups": {
+        "Table": {
+          "groupIdx": 4,
+          "level": 0
+        },
+        "Reading Corner": {
+          "groupIdx": 5,
+          "level": 0
+        },
+        "Rest of Room": {
+          "groupIdx": 6,
+          "level": 0
+        }
+      },
+      "lights": [
+        {
+          "id": 0,
+          "name": "Front Left",
+          "dmxPairIdx": 8,
+          "groupName": "Rest of Room"
+        },
+        {
+          "id": 1,
+          "name": "Front Right",
+          "dmxPairIdx": 11,
+          "groupName": "Rest of Room"
+        },
+        {
+          "id": 2,
+          "name": "Mid Left",
+          "dmxPairIdx": 9,
+          "groupName": "Table"
+        },
+        {
+          "id": 3,
+          "name": "Mid Right",
+          "dmxPairIdx": 12,
+          "groupName": "Table"
+        },
+        {
+          "id": 4,
+          "name": "Rear Left",
+          "dmxPairIdx": 10,
+          "groupName": "Rest of Room"
+        },
+        {
+          "id": 5,
+          "name": "Rear Right",
+          "dmxPairIdx": 13,
+          "groupName": "Reading Corner"
+        }
+      ],
+      "roomPresets": {
+        "All On": {
+          "dimmerGroupLevels": {
+            "Table": 1024,
+            "Reading Corner": 1024,
+            "Rest of Room": 1024
+          }
+        },
+        "Dim": {
+          "dimmerGroupLevels": {
+            "Table": 10,
+            "Reading Corner": 10,
+            "Rest of Room": 10
+          }
+        },
+        "All Off": {
+          "dimmerGroupLevels": {
+            "Table": 0,
+            "Reading Corner": 0,
+            "Rest of Room": 0
+          }
+        },
+        "Dinner": {
+          "dimmerGroupLevels": {
+            "Table": 1024,
+            "Reading Corner": 0,
+            "Rest of Room": 0
+          }
+        },
+        "Reading Corner": {
+          "dimmerGroupLevels": {
+            "Reading Corner": 1024
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Master Bedroom",
+      "switches": [
+        {
+          "channel": 7,
+          "name": "Master Bedroom Up",
+          "action": "TOGGLE_UP"
+        },
+        {
+          "channel": 8,
+          "name": "Master Bedroom Down",
+          "action": "TOGGLE_DOWN"
+        }
+      ],
+      "dimmerGroups": {
+        "Kate": {
+          "groupIdx": 11,
+          "level": 0
+        },
+        "Alex": {
+          "groupIdx": 12,
+          "level": 0
+        },
+        "Reading": {
+          "groupIdx": 13,
+          "level": 0
+        },
+        "Rest of Room": {
+          "groupIdx": 14,
+          "level": 0
+        }
+      },
+      "lights": [
+        {
+          "id": 0,
+          "name": "Front Left",
+          "dmxPairIdx": 24,
+          "groupName": "Rest of Room"
+        },
+        {
+          "id": 1,
+          "name": "Front Right",
+          "dmxPairIdx": 25,
+          "groupName": "Rest of Room"
+        },
+        {
+          "id": 2,
+          "name": "Mid Left",
+          "dmxPairIdx": 26,
+          "groupName": "Rest of Room"
+        },
+        {
+          "id": 3,
+          "name": "Mid Right",
+          "dmxPairIdx": 27,
+          "groupName": "Alex"
+        },
+        {
+          "id": 4,
+          "name": "Rear Left",
+          "dmxPairIdx": 28,
+          "groupName": "Reading"
+        },
+        {
+          "id": 5,
+          "name": "Rear Right",
+          "dmxPairIdx": 29,
+          "groupName": "Kate"
+        }
+      ],
+      "roomPresets": {
+        "All On": {
+          "dimmerGroupLevels": {
+            "Kate": 1024,
+            "Reading": 1024,
+            "Alex": 1024,
+            "Rest of Room": 1024
+          }
+        },
+        "Dim": {
+          "dimmerGroupLevels": {
+            "Kate": 10,
+            "Reading": 10,
+            "Alex": 10,
+            "Rest of Room": 10
+          }
+        },
+        "All Off": {
+          "dimmerGroupLevels": {
+            "Kate": 0,
+            "Reading": 0,
+            "Alex": 0,
+            "Rest of Room": 0
+          }
+        },
+        "Reading": {
+          "dimmerGroupLevels": {
+            "Reading": 50
+          }
         }
       }
     }
-  },
-  {
-    "id": 1,
-    "name": "Living Room",
-    "switches": [
-      {
-        "channel": 1,
-        "name": "Living Up",
-        "action": "TOGGLE_UP"
-      },
-      {
-        "channel": 2,
-        "name": "Living Down",
-        "action": "TOGGLE_DOWN"
-      }
-    ],
-    "dimmerGroups": {
-      "TV": {
-        "groupIdx": 1,
-        "level": 0
-      },
-      "Around TV": {
-        "groupIdx": 2,
-        "level": 0
-      },
-      "Sofa": {
-        "groupIdx": 3,
-        "level": 0
-      }
-    },
-    "lights": [
-      {
-        "id": 0,
-        "name": "Front Left",
-        "dmxPairIdx": 2,
-        "groupName": "Around TV"
-      },
-      {
-        "id": 1,
-        "name": "Front Right",
-        "dmxPairIdx": 5,
-        "groupName": "Sofa"
-      },
-      {
-        "id": 2,
-        "name": "Mid Left",
-        "dmxPairIdx": 3,
-        "groupName": "TV"
-      },
-      {
-        "id": 3,
-        "name": "Mid Right",
-        "dmxPairIdx": 6,
-        "groupName": "Sofa"
-      },
-      {
-        "id": 4,
-        "name": "Rear Left",
-        "dmxPairIdx": 4,
-        "groupName": "Around TV"
-      },
-      {
-        "id": 5,
-        "name": "Rear Right",
-        "dmxPairIdx": 7,
-        "groupName": "Sofa"
-      }
-    ],
-    "roomPresets": {
-      "All On": {
-        "dimmerGroupLevels": {
-          "Around TV": 1024,
-          "TV": 1024,
-          "Sofa": 1024
-        }
-      },
-      "Dim": {
-        "dimmerGroupLevels": {
-          "Around TV": 10,
-          "TV": 10,
-          "Sofa": 10
-        }
-      },
-      "All Off": {
-        "dimmerGroupLevels": {
-          "Around TV": 0,
-          "TV": 0,
-          "Sofa": 0
-        }
-      },
-      "TV": {
-        "dimmerGroupLevels": {
-          "Around TV": 100,
-          "TV": 0,
-          "Sofa": 100
-        }
-      },
-      "Reading": {
-        "dimmerGroupLevels": {
-          "Sofa": 100
-        }
-      }
-    }
-  },
-  {
-    "id": 2,
-    "name": "Dining Room",
-    "switches": [
-      {
-        "channel": 3,
-        "name": "Dining Up",
-        "action": "TOGGLE_UP"
-      },
-      {
-        "channel": 4,
-        "name": "Dining Down",
-        "action": "TOGGLE_DOWN"
-      }
-    ],
-    "dimmerGroups": {
-      "Table": {
-        "groupIdx": 4,
-        "level": 0
-      },
-      "Reading Corner": {
-        "groupIdx": 5,
-        "level": 0
-      },
-      "Rest of Room": {
-        "groupIdx": 6,
-        "level": 0
-      }
-    },
-    "lights": [
-      {
-        "id": 0,
-        "name": "Front Left",
-        "dmxPairIdx": 8,
-        "groupName": "Rest of Room"
-      },
-      {
-        "id": 1,
-        "name": "Front Right",
-        "dmxPairIdx": 11,
-        "groupName": "Rest of Room"
-      },
-      {
-        "id": 2,
-        "name": "Mid Left",
-        "dmxPairIdx": 9,
-        "groupName": "Table"
-      },
-      {
-        "id": 3,
-        "name": "Mid Right",
-        "dmxPairIdx": 12,
-        "groupName": "Table"
-      },
-      {
-        "id": 4,
-        "name": "Rear Left",
-        "dmxPairIdx": 10,
-        "groupName": "Rest of Room"
-      },
-      {
-        "id": 5,
-        "name": "Rear Right",
-        "dmxPairIdx": 13,
-        "groupName": "Reading Corner"
-      }
-    ],
-    "roomPresets": {
-      "All On": {
-        "dimmerGroupLevels": {
-          "Table": 1024,
-          "Reading Corner": 1024,
-          "Rest of Room": 1024
-        }
-      },
-      "Dim": {
-        "dimmerGroupLevels": {
-          "Table": 10,
-          "Reading Corner": 10,
-          "Rest of Room": 10
-        }
-      },
-      "All Off": {
-        "dimmerGroupLevels": {
-          "Table": 0,
-          "Reading Corner": 0,
-          "Rest of Room": 0
-        }
-      },
-      "Dinner": {
-        "dimmerGroupLevels": {
-          "Table": 1024,
-          "Reading Corner": 0,
-          "Rest of Room": 0
-        }
-      },
-      "Reading Corner": {
-        "dimmerGroupLevels": {
-          "Reading Corner": 1024
-        }
-      }
-    }
-  },
-  {
-    "id": 2,
-    "name": "Master Bedroom",
-    "switches": [
-      {
-        "channel": 7,
-        "name": "Master Bedroom Up",
-        "action": "TOGGLE_UP"
-      },
-      {
-        "channel": 8,
-        "name": "Master Bedroom Down",
-        "action": "TOGGLE_DOWN"
-      }
-    ],
-    "dimmerGroups": {
-      "Kate": {
-        "groupIdx": 11,
-        "level": 0
-      },
-      "Alex": {
-        "groupIdx": 12,
-        "level": 0
-      },
-      "Reading": {
-        "groupIdx": 13,
-        "level": 0
-      },
-      "Rest of Room": {
-        "groupIdx": 14,
-        "level": 0
-      }
-    },
-    "lights": [
-      {
-        "id": 0,
-        "name": "Front Left",
-        "dmxPairIdx": 24,
-        "groupName": "Rest of Room"
-      },
-      {
-        "id": 1,
-        "name": "Front Right",
-        "dmxPairIdx": 25,
-        "groupName": "Rest of Room"
-      },
-      {
-        "id": 2,
-        "name": "Mid Left",
-        "dmxPairIdx": 26,
-        "groupName": "Rest of Room"
-      },
-      {
-        "id": 3,
-        "name": "Mid Right",
-        "dmxPairIdx": 27,
-        "groupName": "Alex"
-      },
-      {
-        "id": 4,
-        "name": "Rear Left",
-        "dmxPairIdx": 28,
-        "groupName": "Reading"
-      },
-      {
-        "id": 5,
-        "name": "Rear Right",
-        "dmxPairIdx": 29,
-        "groupName": "Kate"
-      }
-    ],
-    "roomPresets": {
-      "All On": {
-        "dimmerGroupLevels": {
-          "Kate": 1024,
-          "Reading": 1024,
-          "Alex": 1024,
-          "Rest of Room": 1024
-        }
-      },
-      "Dim": {
-        "dimmerGroupLevels": {
-          "Kate": 10,
-          "Reading": 10,
-          "Alex": 10,
-          "Rest of Room": 10
-        }
-      },
-      "All Off": {
-        "dimmerGroupLevels": {
-          "Kate": 0,
-          "Reading": 0,
-          "Alex": 0,
-          "Rest of Room": 0
-        }
-      },
-      "Reading": {
-        "dimmerGroupLevels": {
-          "Reading": 50
-        }
-      }
-    }
-  }
-]
+  ]
+}
