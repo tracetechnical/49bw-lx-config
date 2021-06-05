@@ -298,19 +298,19 @@
       ],
       "dimmerGroups": {
         "Kate": {
-          "groupIdx": 11,
-          "level": 0
-        },
-        "Alex": {
           "groupIdx": 12,
           "level": 0
         },
-        "Reading": {
+        "Alex": {
           "groupIdx": 13,
           "level": 0
         },
-        "Rest of Room": {
+        "Reading": {
           "groupIdx": 14,
+          "level": 0
+        },
+        "Rest of Room": {
+          "groupIdx": 15,
           "level": 0
         }
       },
