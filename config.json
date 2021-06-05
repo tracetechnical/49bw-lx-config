@@ -2,11 +2,20 @@
   "rooms": [
     {
       "id": 0,
-      "name": "Porch",
+      "name": "Hall",
       "switches": [],
       "dimmerGroups": {
-        "All": {
+        "Porch": {
           "groupIdx": 0,
+          "level": 0
+        },
+        "Downstairs Hall": {
+          "groupIdx": 10,
+          "level": 0
+        },
+        
+        "Upstairs Hall": {
+          "groupIdx": 11,
           "level": 0
         }
       },
@@ -15,13 +24,54 @@
           "id": 0,
           "name": "Porch",
           "dmxPairIdx": 1,
-          "groupName": "All"
+          "groupName": "Porch"
+        },
+        {
+          "id": 1,
+          "name": "DS Hall",
+          "dmxPairIdx": 20,
+          "groupName": "DS Hall"
+        },
+        {
+          "id": 2,
+          "name": "US Hall 1",
+          "dmxPairIdx": 21,
+          "groupName": "US Hall"
+        },
+        {
+          "id": 3,
+          "name": "US Hall 2",
+          "dmxPairIdx": 22,
+          "groupName": "US Hall"
+        },
+        {
+          "id": 4,
+          "name": "US Hall 3",
+          "dmxPairIdx": 23,
+          "groupName": "US Hall"
         }
       ],
       "roomPresets": {
         "All On": {
           "dimmerGroupLevels": {
-            "Porch": 1024
+            "Porch": 1024,
+            "DS Hall": 1024,
+            "US Hall": 1024
+          }
+        }
+        "All Off": {
+          "dimmerGroupLevels": {
+            "Porch": 0,
+            "DS Hall": 0,
+            "US Hall": 0
+          }
+        },
+        
+        "Dim": {
+          "dimmerGroupLevels": {
+            "Porch": 10,
+            "DS Hall": 10,
+            "US Hall": 10
           }
         }
       }
