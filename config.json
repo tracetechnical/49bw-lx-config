@@ -403,7 +403,7 @@
         },
         "Shower": {
           "dimmerGroupLevels": {
-            "Toilet": 1024
+            "Toilet": 1024,
             "Shower": 1024
           }
         },
