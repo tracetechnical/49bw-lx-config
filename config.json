@@ -312,11 +312,11 @@
           "groupIdx": 15,
           "level": 0
         },
-        "Toilet": {
+        "Shower": {
           "groupIdx": 16,
           "level": 0
         },
-        "Shower": {
+        "Toilet": {
           "groupIdx": 17,
           "level": 0
         }
