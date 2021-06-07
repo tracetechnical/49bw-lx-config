@@ -68,9 +68,9 @@
         },
         "Dim": {
           "dimmerGroupLevels": {
-            "Porch": 10,
-            "Downstairs Hall": 10,
-            "Upstairs Hall": 10
+            "Porch": 3,
+            "Downstairs Hall": 3,
+            "Upstairs Hall": 3
           }
         }
       }
@@ -153,9 +153,9 @@
         },
         "Dim": {
           "dimmerGroupLevels": {
-            "Around TV": 10,
-            "TV": 10,
-            "Sofa": 10
+            "Around TV": 3,
+            "TV": 3,
+            "Sofa": 3
           }
         },
         "All Off": {
@@ -257,9 +257,9 @@
         },
         "Dim": {
           "dimmerGroupLevels": {
-            "Table": 10,
-            "Reading Corner": 10,
-            "Rest of Room": 10
+            "Table": 3,
+            "Reading Corner": 3,
+            "Rest of Room": 3
           }
         },
         "All Off": {
@@ -366,10 +366,10 @@
         },
         "Dim": {
           "dimmerGroupLevels": {
-            "Kate": 10,
-            "Reading": 10,
-            "Alex": 10,
-            "Rest of Room": 10
+            "Kate": 3,
+            "Reading": 3,
+            "Alex": 3,
+            "Rest of Room": 3
           }
         },
         "All Off": {
@@ -442,7 +442,7 @@
         },
         "Night Toilet": {
           "dimmerGroupLevels": {
-            "Toilet": 10
+            "Toilet": 2
           }
         }
       }
