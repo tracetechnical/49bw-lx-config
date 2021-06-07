@@ -360,15 +360,15 @@
         },
         {
           "id": 6,
-          "name": "Toilet",
+          "name": "Shower",
           "dmxPairIdx": 30,
-          "groupName": "Toilet"
+          "groupName": "Shower"
         },
         {
           "id": 7,
-          "name": "Shower",
+          "name": "Toilet",
           "dmxPairIdx": 31,
-          "groupName": "Shower"
+          "groupName": "Toilet"
         }
       ],
       "roomPresets": {
@@ -399,6 +399,17 @@
         "Reading": {
           "dimmerGroupLevels": {
             "Reading": 50
+          }
+        },
+        "Shower": {
+          "dimmerGroupLevels": {
+            "Toilet": 1024
+            "Shower": 1024
+          }
+        },
+        "Night Toilet": {
+          "dimmerGroupLevels": {
+            "Toilet": 50
           }
         }
       }
