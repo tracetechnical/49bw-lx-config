@@ -311,6 +311,14 @@
         "Rest of Room": {
           "groupIdx": 15,
           "level": 0
+        },
+        "Toilet": {
+          "groupIdx": 30,
+          "level": 0
+        },
+        "Shower": {
+          "groupIdx": 31,
+          "level": 0
         }
       },
       "lights": [
@@ -349,6 +357,18 @@
           "name": "Rear Right",
           "dmxPairIdx": 29,
           "groupName": "Kate"
+        },
+        {
+          "id": 6,
+          "name": "Toilet",
+          "dmxPairIdx": 30,
+          "groupName": "Toilet"
+        },
+        {
+          "id": 7,
+          "name": "Shower",
+          "dmxPairIdx": 31,
+          "groupName": "Shower"
         }
       ],
       "roomPresets": {
