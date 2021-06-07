@@ -311,14 +311,6 @@
         "Rest of Room": {
           "groupIdx": 15,
           "level": 0
-        },
-        "Shower": {
-          "groupIdx": 16,
-          "level": 0
-        },
-        "Toilet": {
-          "groupIdx": 17,
-          "level": 0
         }
       },
       "lights": [
@@ -357,18 +349,6 @@
           "name": "Rear Right",
           "dmxPairIdx": 29,
           "groupName": "Kate"
-        },
-        {
-          "id": 6,
-          "name": "Shower",
-          "dmxPairIdx": 30,
-          "groupName": "Shower"
-        },
-        {
-          "id": 7,
-          "name": "Toilet",
-          "dmxPairIdx": 31,
-          "groupName": "Toilet"
         }
       ],
       "roomPresets": {
@@ -400,10 +380,58 @@
           "dimmerGroupLevels": {
             "Reading": 50
           }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Master En-suite",
+      "switches": [],
+      "dimmerGroups": {
+        "Shower": {
+          "groupIdx": 16,
+          "level": 0
+        },
+        "Toilet": {
+          "groupIdx": 17,
+          "level": 0
+        }
+      },
+      "lights": [
+        {
+          "id": 0,
+          "name": "Shower",
+          "dmxPairIdx": 30,
+          "groupName": "Shower"
+        },
+        {
+          "id": 1,
+          "name": "Toilet",
+          "dmxPairIdx": 31,
+          "groupName": "Toilet"
+        }
+      ],
+      "roomPresets": {
+        "All On": {
+          "dimmerGroupLevels": {
+            "Shower": 1024,
+            "Toilet": 1024
+          }
+        },
+        "Dim": {
+          "dimmerGroupLevels": {
+            "Shower": 10,
+            "Toilet": 10
+          }
+        },
+        "All Off": {
+          "dimmerGroupLevels": {
+            "Shower": 0,
+            "Toilet": 0
+          }
         },
         "Shower": {
           "dimmerGroupLevels": {
-            "Toilet": 1024,
             "Shower": 1024
           }
         },
