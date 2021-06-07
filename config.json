@@ -442,7 +442,7 @@
         },
         "Night Toilet": {
           "dimmerGroupLevels": {
-            "Toilet": 50
+            "Toilet": 10
           }
         }
       }
