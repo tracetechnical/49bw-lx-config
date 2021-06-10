@@ -506,7 +506,7 @@
           "name": "Rear Right",
           "dmxPairIdx": 37,
           "groupName": "Desk"
-        },
+        }
       ],
       "roomPresets": {
         "All On": {
