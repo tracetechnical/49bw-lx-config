@@ -446,6 +446,109 @@
           }
         }
       }
+    },
+    {
+      "id": 5,
+      "name": "Kate Office",
+      "currentPreset":"",
+      "switches": [],
+      "dimmerGroups": {
+        "Desk": {
+          "groupIdx": 18,
+          "level": 0
+        },
+        "Makeup": {
+          "groupIdx": 19,
+          "level": 0
+        },
+        "Bed": {
+          "groupIdx": 20,
+          "level": 0
+        },
+        "Rest of Room": {
+          "groupIdx": 21,
+          "level": 0
+        }
+      },
+      "lights": [
+        {
+          "id": 0,
+          "name": "Front Left",
+          "dmxPairIdx": 32,
+          "groupName": "Bed"
+        },
+        {
+          "id": 1,
+          "name": "Rear Left",
+          "dmxPairIdx": 35,
+          "groupName": "Makeup"
+        },
+        {
+          "id": 2,
+          "name": "Front Mid",
+          "dmxPairIdx": 33,
+          "groupName": "Bed"
+        },
+        {
+          "id": 3,
+          "name": "Rear Mid",
+          "dmxPairIdx": 36,
+          "groupName": "Rest of Room"
+        },
+        {
+          "id": 4,
+          "name": "Front Right",
+          "dmxPairIdx": 34,
+          "groupName": "Desk"
+        },
+        {
+          "id": 5,
+          "name": "Rear Right",
+          "dmxPairIdx": 37,
+          "groupName": "Desk"
+        },
+      ],
+      "roomPresets": {
+        "All On": {
+          "dimmerGroupLevels": {
+            "Desk": 1024,
+            "Makeup": 1024,
+            "Bed": 1024,
+            "Rest of Room": 1024
+          }
+        },
+        "Dim": {
+          "dimmerGroupLevels": {
+            "Desk": 10,
+            "Makeup": 10,
+            "Bed": 10,
+            "Rest of Room": 10
+          }
+        },
+        "All Off": {
+          "dimmerGroupLevels": {
+            "Desk": 0,
+            "Makeup": 0,
+            "Bed": 0,
+            "Rest of Room": 0
+          }
+        },
+        "Desk": {
+          "dimmerGroupLevels": {
+            "Desk": 1024
+          }
+        },
+        "Makeup": {
+          "dimmerGroupLevels": {
+            "Makeup": 1024
+          }
+        },
+        "Reading": {
+          "dimmerGroupLevels": {
+            "Bed": 1024
+          }
+        }
+      }
     }
   ]
 }
