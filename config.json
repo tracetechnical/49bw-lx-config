@@ -66,6 +66,13 @@
             "Upstairs Hall": 0
           }
         },
+        "Manual All Off": {
+          "dimmerGroupLevels": {
+            "Porch": 0,
+            "Downstairs Hall": 0,
+            "Upstairs Hall": 0
+          }
+        },
         "Dim": {
           "dimmerGroupLevels": {
             "Porch": 3,
