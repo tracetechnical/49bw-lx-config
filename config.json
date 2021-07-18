@@ -59,14 +59,14 @@
             "Upstairs Hall": 1024
           }
         },
-        "All Off": {
+        "All Off (MAN)": {
           "dimmerGroupLevels": {
             "Porch": 0,
             "Downstairs Hall": 0,
             "Upstairs Hall": 0
           }
         },
-        "Manual All Off": {
+        "All Off (AUTO)": {
           "dimmerGroupLevels": {
             "Porch": 0,
             "Downstairs Hall": 0,
@@ -165,7 +165,14 @@
             "Sofa": 3
           }
         },
-        "All Off": {
+        "All Off (MAN)": {
+          "dimmerGroupLevels": {
+            "Around TV": 0,
+            "TV": 0,
+            "Sofa": 0
+          }
+        },
+        "All Off (AUTO)": {
           "dimmerGroupLevels": {
             "Around TV": 0,
             "TV": 0,
@@ -269,7 +276,14 @@
             "Rest of Room": 3
           }
         },
-        "All Off": {
+        "All Off (MAN)": {
+          "dimmerGroupLevels": {
+            "Table": 0,
+            "Reading Corner": 0,
+            "Rest of Room": 0
+          }
+        },
+        "All Off (AUTO)": {
           "dimmerGroupLevels": {
             "Table": 0,
             "Reading Corner": 0,
@@ -379,7 +393,15 @@
             "Rest of Room": 3
           }
         },
-        "All Off": {
+        "All Off (MAN)": {
+          "dimmerGroupLevels": {
+            "Kate": 0,
+            "Reading": 0,
+            "Alex": 0,
+            "Rest of Room": 0
+          }
+        },
+        "All Off (AUTO)": {
           "dimmerGroupLevels": {
             "Kate": 0,
             "Reading": 0,
@@ -436,7 +458,13 @@
             "Toilet": 10
           }
         },
-        "All Off": {
+        "All Off (MAN)": {
+          "dimmerGroupLevels": {
+            "Shower": 0,
+            "Toilet": 0
+          }
+        },
+        "All Off (AUTO)": {
           "dimmerGroupLevels": {
             "Shower": 0,
             "Toilet": 0
@@ -532,7 +560,15 @@
             "Rest of Room": 10
           }
         },
-        "All Off": {
+        "All Off (MAN)": {
+          "dimmerGroupLevels": {
+            "Desk": 0,
+            "Makeup": 0,
+            "Bed": 0,
+            "Rest of Room": 0
+          }
+        },
+        "All Off (AUTO)": {
           "dimmerGroupLevels": {
             "Desk": 0,
             "Makeup": 0,
