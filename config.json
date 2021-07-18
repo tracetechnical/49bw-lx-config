@@ -261,6 +261,74 @@
     },
     {
       "id": 3,
+      "name": "Hall",
+      "currentPreset":"",
+      "switches": [],
+      "dimmerGroups": {
+        "Downstairs Hall": {
+          "groupIdx": 10,
+          "level": 0
+        },
+        "Upstairs Hall": {
+          "groupIdx": 11,
+          "level": 0
+        }
+      },
+      "lights": [
+        {
+          "id": 1,
+          "name": "DS Hall",
+          "dmxPairIdx": 20,
+          "groupName": "Downstairs Hall"
+        },
+        {
+          "id": 2,
+          "name": "US Hall 1",
+          "dmxPairIdx": 21,
+          "groupName": "Upstairs Hall"
+        },
+        {
+          "id": 3,
+          "name": "US Hall 2",
+          "dmxPairIdx": 22,
+          "groupName": "Upstairs Hall"
+        },
+        {
+          "id": 4,
+          "name": "US Hall 3",
+          "dmxPairIdx": 23,
+          "groupName": "Upstairs Hall"
+        }
+      ],
+      "roomPresets": {
+        "All On": {
+          "dimmerGroupLevels": {
+            "Downstairs Hall": 1024,
+            "Upstairs Hall": 1024
+          }
+        },
+        "All Off (MAN)": {
+          "dimmerGroupLevels": {
+            "Downstairs Hall": 0,
+            "Upstairs Hall": 0
+          }
+        },
+        "All Off (AUTO)": {
+          "dimmerGroupLevels": {
+            "Downstairs Hall": 0,
+            "Upstairs Hall": 0
+          }
+        },
+        "Dim": {
+          "dimmerGroupLevels": {
+            "Downstairs Hall": 3,
+            "Upstairs Hall": 3
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
       "name": "Master Bedroom",
       "currentPreset":"",
       "switches": [
@@ -372,7 +440,7 @@
       }
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Master Ensuite",
       "currentPreset":"",
       "switches": [],
@@ -438,7 +506,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Kate Office",
       "currentPreset":"",
       "switches": [],
@@ -547,75 +615,6 @@
           }
         }
       }
-    },
-    ,
-    {
-      "id": 6,
-      "name": "Hall",
-      "currentPreset":"",
-      "switches": [],
-      "dimmerGroups": {
-        "Downstairs Hall": {
-          "groupIdx": 10,
-          "level": 0
-        },
-        "Upstairs Hall": {
-          "groupIdx": 11,
-          "level": 0
-        }
-      },
-      "lights": [
-        {
-          "id": 1,
-          "name": "DS Hall",
-          "dmxPairIdx": 20,
-          "groupName": "Downstairs Hall"
-        },
-        {
-          "id": 2,
-          "name": "US Hall 1",
-          "dmxPairIdx": 21,
-          "groupName": "Upstairs Hall"
-        },
-        {
-          "id": 3,
-          "name": "US Hall 2",
-          "dmxPairIdx": 22,
-          "groupName": "Upstairs Hall"
-        },
-        {
-          "id": 4,
-          "name": "US Hall 3",
-          "dmxPairIdx": 23,
-          "groupName": "Upstairs Hall"
-        }
-      ],
-      "roomPresets": {
-        "All On": {
-          "dimmerGroupLevels": {
-            "Downstairs Hall": 1024,
-            "Upstairs Hall": 1024
-          }
-        },
-        "All Off (MAN)": {
-          "dimmerGroupLevels": {
-            "Downstairs Hall": 0,
-            "Upstairs Hall": 0
-          }
-        },
-        "All Off (AUTO)": {
-          "dimmerGroupLevels": {
-            "Downstairs Hall": 0,
-            "Upstairs Hall": 0
-          }
-        },
-        "Dim": {
-          "dimmerGroupLevels": {
-            "Downstairs Hall": 3,
-            "Upstairs Hall": 3
-          }
-        }
-      }
-    },
+    }
   ]
 }
