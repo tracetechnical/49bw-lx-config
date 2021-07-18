@@ -79,6 +79,16 @@
             "Downstairs Hall": 3,
             "Upstairs Hall": 3
           }
+        },
+        "Welcome Home": {
+          "dimmerGroupLevels": {
+            "Porch": 1024
+          }
+        },
+        "Porch Off": {
+          "dimmerGroupLevels": {
+            "Porch": 0
+          }
         }
       }
     },
