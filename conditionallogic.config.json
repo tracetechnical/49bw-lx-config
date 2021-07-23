@@ -1104,9 +1104,9 @@
           }
         },
         "output": {
-          "mqttTopic": "lighting/room/Master Ensuite/preset",
-          "onValue": "All On",
-          "offValue": "All Off (AUTO)",
+          "mqttTopic": "blocks/master_ensuite_occupied",
+          "onValue": "1",
+          "offValue": "0",
           "lastValue": "",
           "thisLastValue": "",
           "setByThis": false,
@@ -1115,6 +1115,158 @@
         "delayMilliseconds": 180000,
         "type": "OFF_DELAY",
         "stopMillis": 1627068792369
+      },
+      {
+        "name": "Bathroom Not Occupied",
+        "inputs": {
+          "input1": {
+            "name": "Not Occupied",
+            "mqttTopic": "blocks/master_ensuite_occupied",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 0,
+            "trueValue": "0",
+            "falseValue": "1",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Master Ensuite/preset",
+          "onValue": "All Off (AUTO)",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "AND"
+      },
+      {
+        "name": "Day Bathroom",
+        "inputs": {
+          "input1": {
+            "name": "Occupied",
+            "mqttTopic": "blocks/master_ensuite_occupied",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 0,
+            "trueValue": "1",
+            "falseValue": "0",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input2": {
+            "name": "NOT Night",
+            "mqttTopic": "timeOfDay/night",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 0,
+            "trueValue": "false",
+            "falseValue": "true",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input3": {
+            "name": "In Auto",
+            "mqttTopic": "lighting/room/Master Ensuite/preset",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 0,
+            "trueValue": "All Off (AUTO)",
+            "falseValue": "ANY",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Master Ensuite/preset",
+          "onValue": "All On",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "AND"
+      },
+      {
+        "name": "Night Bathroom",
+        "inputs": {
+          "input1": {
+            "name": "Occupied",
+            "mqttTopic": "blocks/master_ensuite_occupied",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 0,
+            "trueValue": "1",
+            "falseValue": "0",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input2": {
+            "name": "Night",
+            "mqttTopic": "timeOfDay/night",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 0,
+            "trueValue": "true",
+            "falseValue": "false",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input3": {
+            "name": "In Auto",
+            "mqttTopic": "lighting/room/Master Ensuite/preset",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 0,
+            "trueValue": "All Off (AUTO)",
+            "falseValue": "ANY",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Master Ensuite/preset",
+          "onValue": "Night Toilet",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "AND"
       }
     ]
   }
