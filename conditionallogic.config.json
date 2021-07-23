@@ -1081,5 +1081,41 @@
         "type": "TOGGLE_SWITCH"
       }
     ]
+  },
+  {
+    "name": "master_bedroom",
+    "blocks": [
+      {
+        "name": "Ensuite light",
+        "inputs": {
+          "input1": {
+            "name": "Master Ensuite PIR",
+            "mqttTopic": "texecom2mqtt/zone/master_ensuite",
+            "regexString": "\"status\":(.{1})",
+            "matchingGroupId": 1,
+            "validityWindowMilliseconds": 10000,
+            "trueValue": "1",
+            "falseValue": "0",
+            "lastFullInput": "",
+            "lastKnownValue": "0",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": true
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Master Ensuite/preset",
+          "onValue": "All On",
+          "offValue": "All Off (AUTO)",
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "delayMilliseconds": 180000,
+        "type": "OFF_DELAY",
+        "stopMillis": 1627068792369
+      },
+    ]
   }
 ]
