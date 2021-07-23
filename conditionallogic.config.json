@@ -252,10 +252,10 @@
         "name": "Living Room Occupation Off",
         "inputs": {
           "input1": {
-            "name": "Living Occupied",
-            "mqttTopic": "blocks/living_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
+            "name": "Living PIR",
+            "mqttTopic": "texecom2mqtt/zone/living_room_pir",
+            "regexString": "\"status\":(.{1})",
+            "matchingGroupId": 1,
             "validityWindowMilliseconds": 10000,
             "trueValue": "1",
             "falseValue": "0",
@@ -286,10 +286,10 @@
         "name": "Living Room Occupation Short",
         "inputs": {
           "input1": {
-            "name": "Living Occupied",
-            "mqttTopic": "blocks/living_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
+            "name": "Living PIR",
+            "mqttTopic": "texecom2mqtt/zone/living_room_pir",
+            "regexString": "\"status\":(.{1})",
+            "matchingGroupId": 1,
             "validityWindowMilliseconds": 10000,
             "trueValue": "1",
             "falseValue": "0",
@@ -751,10 +751,10 @@
         "name": "Dining Room Occupation Off",
         "inputs": {
           "input1": {
-            "name": "Dining Occupied",
-            "mqttTopic": "blocks/dining_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
+            "name": "Dining PIR",
+            "mqttTopic": "texecom2mqtt/zone/dining_room_pir",
+            "regexString": "\"status\":(.{1})",
+            "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "1",
             "falseValue": "0",
@@ -785,10 +785,10 @@
         "name": "Dining Room Occupation Short",
         "inputs": {
           "input1": {
-            "name": "Dining Occupied",
-            "mqttTopic": "blocks/dining_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
+            "name": "Dining PIR",
+            "mqttTopic": "texecom2mqtt/zone/dining_room_pir",
+            "regexString": "\"status\":(.{1})",
+            "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "1",
             "falseValue": "0",
