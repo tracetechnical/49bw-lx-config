@@ -456,7 +456,7 @@
           "input2": {
             "name": "Living",
             "mqttTopic": "lighting/room/Living Room/preset",
-            "regexString": "([a-zA-Z]+)(\\s\\(.*\\))?",
+            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "ANY",
@@ -516,7 +516,7 @@
           "input2": {
             "name": "Living",
             "mqttTopic": "lighting/room/Living Room/preset",
-            "regexString": "([a-zA-Z]+)(\\s\\(.*\\))?",
+            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "ANY",
@@ -955,7 +955,7 @@
           "input2": {
             "name": "Dining",
             "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": "([a-zA-Z]+)(\\s\\(.*\\))?",
+            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "ANY",
@@ -1015,7 +1015,7 @@
           "input2": {
             "name": "Dining",
             "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": "([a-zA-Z]+)(\\s\\(.*\\))?",
+            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "ANY",
@@ -1210,7 +1210,7 @@
           "input1": {
             "name": "Living",
             "mqttTopic": "lighting/room/Living Room/preset",
-            "regexString": "([a-zA-Z]+)(\\s\\(.*\\))?",
+            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "ANY",
@@ -1224,7 +1224,7 @@
           "input2": {
             "name": "Dining",
             "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": "([a-zA-Z]+)(\\s\\(.*\\))?",
+            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "ANY",
@@ -1256,7 +1256,7 @@
           "input1": {
             "name": "Living",
             "mqttTopic": "lighting/room/Living Room/preset",
-            "regexString": "([a-zA-Z]+)(\\s\\(.*\\))?",
+            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "All Off",
@@ -1270,7 +1270,7 @@
           "input2": {
             "name": "Dining",
             "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": "([a-zA-Z]+)(\\s\\(.*\\))?",
+            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "All Off",
@@ -1683,7 +1683,7 @@
           "input2": {
             "name": "Dining",
             "mqttTopic": "lighting/room/Master Ensuite/preset",
-            "regexString": "([a-zA-Z]+)(\\s\\(.*\\))?",
+            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "ANY",
