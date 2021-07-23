@@ -283,7 +283,7 @@
         "stopMillis": 1627069512367
       },
       {
-        "name": "Living Room Wakeup",
+        "name": "Living Room Wakeup Not Night",
         "inputs": {
           "input1": {
             "name": "Living is Off",
@@ -312,11 +312,85 @@
             "booleanValue": false,
             "noValue": false,
             "valid": false
+          },
+          "input3": {
+            "name": "NOT Night",
+            "mqttTopic": "timeOfDay/night",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 100,
+            "trueValue": "false",
+            "falseValue": "true",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
           }
         },
         "output": {
           "mqttTopic": "lighting/room/Living Room/preset",
           "onValue": "All On",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "AND"
+      },
+      {
+        "name": "Living Room Wakeup Night",
+        "inputs": {
+          "input1": {
+            "name": "Living is Off",
+            "mqttTopic": "lighting/room/Living Room/preset",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 0,
+            "trueValue": "All Off (AUTO)",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input2": {
+            "name": "Living Occupied",
+            "mqttTopic": "blocks/living_occupied",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 100,
+            "trueValue": "1",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input3": {
+            "name": "Night",
+            "mqttTopic": "timeOfDay/night",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 100,
+            "trueValue": "true",
+            "falseValue": "false",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Living Room/preset",
+          "onValue": "Dim",
           "offValue": "",
           "remoteUpdateSubject": {
             "throwable": null
@@ -600,7 +674,7 @@
         "stopMillis": 1627069512368
       },
       {
-        "name": "Dining Room Wakeup",
+        "name": "Dining Room Wakeup Not Night",
         "inputs": {
           "input1": {
             "name": "Dining is Off",
@@ -629,11 +703,85 @@
             "booleanValue": false,
             "noValue": false,
             "valid": false
+          },
+          "input3": {
+            "name": "NOT Night",
+            "mqttTopic": "timeOfDay/night",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 100,
+            "trueValue": "false",
+            "falseValue": "true",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
           }
         },
         "output": {
           "mqttTopic": "lighting/room/Dining Room/preset",
           "onValue": "All On",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "AND"
+      },
+      {
+        "name": "Dining Room Wakeup Night",
+        "inputs": {
+          "input1": {
+            "name": "Dining is Off",
+            "mqttTopic": "lighting/room/Dining Room/preset",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 0,
+            "trueValue": "All Off (AUTO)",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input2": {
+            "name": "Dining Occupied",
+            "mqttTopic": "blocks/dining_occupied",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 100,
+            "trueValue": "1",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input3": {
+            "name": "Night",
+            "mqttTopic": "timeOfDay/night",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 100,
+            "trueValue": "true",
+            "falseValue": "false",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Dining Room/preset",
+          "onValue": "Dim",
           "offValue": "",
           "remoteUpdateSubject": {
             "throwable": null
