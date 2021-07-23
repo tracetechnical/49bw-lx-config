@@ -1086,7 +1086,7 @@
     "name": "master_bedroom",
     "blocks": [
       {
-        "name": "Ensuite light",
+        "name": "Ensuite Occupied (Shower Mode - Long Off)",
         "inputs": {
           "input1": {
             "name": "Master Ensuite PIR",
@@ -1113,6 +1113,37 @@
           "setMillis": 0
         },
         "delayMilliseconds": 600000,
+        "type": "OFF_DELAY",
+        "stopMillis": 1627068792369
+      },
+      {
+        "name": "Ensuite Occupied (Short Off)",
+        "inputs": {
+          "input1": {
+            "name": "Master Ensuite PIR",
+            "mqttTopic": "texecom2mqtt/zone/master_ensuite",
+            "regexString": "\"status\":(.{1})",
+            "matchingGroupId": 1,
+            "validityWindowMilliseconds": 10000,
+            "trueValue": "1",
+            "falseValue": "0",
+            "lastFullInput": "",
+            "lastKnownValue": "0",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": true
+          }
+        },
+        "output": {
+          "mqttTopic": "blocks/master_ensuite_occupied_short",
+          "onValue": "1",
+          "offValue": "0",
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "delayMilliseconds": 60000,
         "type": "OFF_DELAY",
         "stopMillis": 1627068792369
       },
@@ -1213,7 +1244,7 @@
         "inputs": {
           "input1": {
             "name": "Occupied",
-            "mqttTopic": "blocks/master_ensuite_occupied",
+            "mqttTopic": "blocks/master_ensuite_occupied_short",
             "regexString": ".*",
             "matchingGroupId": 0,
             "validityWindowMilliseconds": 1000,
@@ -1257,6 +1288,52 @@
         "output": {
           "mqttTopic": "lighting/room/Master Ensuite/preset",
           "onValue": "Night Toilet",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "AND"
+      },
+      {
+        "name": "Night Bathroom End",
+        "inputs": {
+          "input1": {
+            "name": "NOT Occupied",
+            "mqttTopic": "blocks/master_ensuite_occupied_short",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 1000,
+            "trueValue": "0",
+            "falseValue": "1",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input2": {
+            "name": "In Night Preset",
+            "mqttTopic": "lighting/room/Master Ensuite/preset",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 0,
+            "trueValue": "Night Toilet",
+            "falseValue": "ANY",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Master Ensuite/preset",
+          "onValue": "All Off (AUTO)",
           "offValue": "",
           "remoteUpdateSubject": {
             "throwable": null
