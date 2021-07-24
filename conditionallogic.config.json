@@ -9,7 +9,7 @@
         "inputs": {
           "input1": {
             "name": "SW1",
-            "mqttTopic": "lighting/switch/3/short",
+            "mqttTopic": "lighting/switch/1/short",
             "regexString": ".*",
             "matchingGroupId": 0,
             "validityWindowMilliseconds": 10,
