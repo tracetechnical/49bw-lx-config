@@ -584,6 +584,8 @@
     "name": "dining",
     "blocks": [
       {
+        "row": 0,
+        "col": 0,
         "name": "Dining Room Switch PS_ON1",
         "inputs": {
           "input1": {
@@ -630,6 +632,8 @@
         "type": "OR"
       },
       {
+        "row": 1,
+        "col": 0,
         "name": "Dining Room Switch PS_ON2",
         "inputs": {
           "input1": {
@@ -676,6 +680,8 @@
         "type": "OR"
       },
       {
+        "row": 0,
+        "col": 1,
         "name": "Dining Room Switch PS_OFF1",
         "inputs": {
           "input1": {
@@ -736,6 +742,8 @@
         "type": "OR"
       },
       {
+        "row": 2,
+        "col": 0,
         "name": "Dining Room Occupation On",
         "inputs": {
           "input1": {
@@ -770,6 +778,8 @@
         "stopMillis": 0
       },
       {
+        "row": 2,
+        "col": 1,
         "name": "Dining Room Occupation Off",
         "inputs": {
           "input1": {
@@ -804,6 +814,8 @@
         "stopMillis": 1627069512368
       },
       {
+        "row": 2,
+        "col": 2,
         "name": "Dining Room Occupation Short",
         "inputs": {
           "input1": {
@@ -838,6 +850,8 @@
         "stopMillis": 1627069512368
       },
       {
+        "row": 3,
+        "col": 0,
         "name": "Dining Room Wakeup Not Night",
         "inputs": {
           "input1": {
@@ -898,6 +912,8 @@
         "type": "AND"
       },
       {
+        "row": 4,
+        "col": 0,
         "name": "Dining Room Wakeup Night",
         "inputs": {
           "input1": {
@@ -958,6 +974,8 @@
         "type": "AND"
       },
       {
+        "row": 3,
+        "col": 1,
         "name": "Dining Room Unoccupied Not Night",
         "inputs": {
           "input1": {
@@ -1018,6 +1036,8 @@
         "type": "AND"
       },
       {
+        "row": 4,
+        "col": 1,
         "name": "Dining Room Unoccupied Night",
         "inputs": {
           "input1": {
@@ -1083,6 +1103,42 @@
     "name": "downstairs",
     "blocks": [
       {
+        "row": 0,
+        "col": 0,
+        "name": "Front Door Welcome Home On",
+        "inputs": {
+          "input1": {
+            "name": "Front Door Contact",
+            "mqttTopic": "texecom2mqtt/zone/front_door",
+            "regexString": "\"status\":(.{1})",
+            "matchingGroupId": 1,
+            "validityWindowMilliseconds": 1000,
+            "trueValue": "1",
+            "falseValue": "0",
+            "lastFullInput": "{\"name\":\"Front Door\",\"number\":40,\"areas\":[\"A\"],\"status\":0,\"type\":\"Entry/Exit 1\"}",
+            "lastKnownValue": "0",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": true
+          }
+        },
+        "output": {
+          "mqttTopic": "blocks/welcome_home",
+          "onValue": "1",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "AND"
+      },
+      {
+        "row": 0,
+        "col": 1,
         "name": "Front Door Welcome Home Off",
         "inputs": {
           "input1": {
@@ -1117,38 +1173,8 @@
         "stopMillis": 1627068792369
       },
       {
-        "name": "Front Door Welcome Home On",
-        "inputs": {
-          "input1": {
-            "name": "Front Door Contact",
-            "mqttTopic": "texecom2mqtt/zone/front_door",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "{\"name\":\"Front Door\",\"number\":40,\"areas\":[\"A\"],\"status\":0,\"type\":\"Entry/Exit 1\"}",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
-          }
-        },
-        "output": {
-          "mqttTopic": "blocks/welcome_home",
-          "onValue": "1",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
-      },
-      {
+        "row": 1,
+        "col": 0,
         "name": "Welcome Home Light On",
         "inputs": {
           "input1": {
@@ -1195,6 +1221,8 @@
         "type": "AND"
       },
       {
+        "row": 1,
+        "col": 1,
         "name": "Welcome Home Light Off",
         "inputs": {
           "input1": {
@@ -1227,6 +1255,8 @@
         "type": "AND"
       },
       {
+        "row": 2,
+        "col": 0,
         "name": "Any light on Downstairs",
         "inputs": {
           "input1": {
@@ -1273,6 +1303,8 @@
         "type": "OR"
       },
       {
+        "row": 2,
+        "col": 1,
         "name": "All lights off Downstairs",
         "inputs": {
           "input1": {
@@ -1319,6 +1351,8 @@
         "type": "AND"
       },
       {
+        "row": 3,
+        "col": 0,
         "name": "Dining Fob Toggle",
         "inputs": {
           "input1": {
@@ -1393,6 +1427,8 @@
         "type": "TOGGLE_SWITCH"
       },
       {
+        "row": 3,
+        "col": 1,
         "name": "Living Fob Toggle",
         "inputs": {
           "input1": {
@@ -1472,6 +1508,8 @@
     "name": "master_bedroom",
     "blocks": [
       {
+        "row": 0,
+        "col": 0,
         "name": "Ensuite Occupied (Shower Mode - Long Off)",
         "inputs": {
           "input1": {
@@ -1503,6 +1541,8 @@
         "stopMillis": 1627068792369
       },
       {
+        "row": 0,
+        "col": 1,
         "name": "Ensuite Occupied (Short Off)",
         "inputs": {
           "input1": {
@@ -1534,6 +1574,8 @@
         "stopMillis": 1627068792369
       },
       {
+        "row": 0,
+        "col": 2,
         "name": "Bathroom Not Occupied",
         "inputs": {
           "input1": {
@@ -1566,6 +1608,8 @@
         "type": "AND"
       },
       {
+        "row": 1,
+        "col": 0,
         "name": "Day Bathroom",
         "inputs": {
           "input1": {
@@ -1626,6 +1670,8 @@
         "type": "AND"
       },
       {
+        "row": 1,
+        "col": 1,
         "name": "Night Bathroom",
         "inputs": {
           "input1": {
@@ -1686,6 +1732,8 @@
         "type": "AND"
       },
       {
+        "row": 1,
+        "col": 2,
         "name": "Night Bathroom End",
         "inputs": {
           "input1": {
