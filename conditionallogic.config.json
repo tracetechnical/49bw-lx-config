@@ -1510,7 +1510,7 @@
        {
         "row": 0,
         "col": 0,
-        "name": "Living Room Switch PS_ON1",
+        "name": "Master Bedroom Switch PS_ON1",
         "inputs": {
           "input1": {
             "name": "SW1",
