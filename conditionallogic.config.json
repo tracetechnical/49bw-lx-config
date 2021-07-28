@@ -1618,7 +1618,7 @@
         "type": "OR"
       },
       {
-        "row": 0,
+        "row": 1,
         "col": 0,
         "name": "Ensuite Occupied (Shower Mode - Long Off)",
         "inputs": {
@@ -1651,7 +1651,7 @@
         "stopMillis": 1627068792369
       },
       {
-        "row": 0,
+        "row": 1,
         "col": 1,
         "name": "Ensuite Occupied (Short Off)",
         "inputs": {
@@ -1684,7 +1684,7 @@
         "stopMillis": 1627068792369
       },
       {
-        "row": 0,
+        "row": 1,
         "col": 2,
         "name": "Bathroom Not Occupied",
         "inputs": {
@@ -1718,7 +1718,7 @@
         "type": "AND"
       },
       {
-        "row": 1,
+        "row": 2,
         "col": 0,
         "name": "Day Bathroom",
         "inputs": {
@@ -1780,7 +1780,7 @@
         "type": "AND"
       },
       {
-        "row": 1,
+        "row": 2,
         "col": 1,
         "name": "Night Bathroom",
         "inputs": {
@@ -1842,7 +1842,7 @@
         "type": "AND"
       },
       {
-        "row": 1,
+        "row": 2,
         "col": 2,
         "name": "Night Bathroom End",
         "inputs": {
