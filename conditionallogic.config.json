@@ -788,7 +788,7 @@
             "regexString": "\"status\":(.{1})",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 1000,
-            "trueValue": "",
+            "trueValue": "1",
             "falseValue": "0",
             "lastFullInput": "",
             "lastKnownValue": "0",
@@ -1158,7 +1158,7 @@
         },
         "output": {
           "mqttTopic": "blocks/welcome_home",
-          "onValue": "",
+          "onValue": "1",
           "offValue": "0",
           "remoteUpdateSubject": {
             "throwable": null
