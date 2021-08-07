@@ -615,6 +615,106 @@
           }
         }
       }
+    },
+     {
+      "id": 6,
+      "name": "Alex Office",
+      "currentPreset":"",
+      "switches": [],
+      "dimmerGroups": {
+        "Main Desk": {
+          "groupIdx": 22,
+          "level": 0
+        },
+        "Electronics Bench": {
+          "groupIdx": 23,
+          "level": 0
+        },
+        "Door": {
+          "groupIdx": 24,
+          "level": 0
+        },
+        "Work Work Desk": {
+          "groupIdx": 25,
+          "level": 0
+        }
+      },
+      "lights": [
+        {
+          "id": 0,
+          "name": "Electronics Bench",
+          "dmxPairIdx": 38,
+          "groupName": "Electronics Bench"
+        },
+        {
+          "id": 1,
+          "name": "Main Desk",
+          "dmxPairIdx": 39,
+          "groupName": "Main Desk"
+        },
+        {
+          "id": 2,
+          "name": "Work Work Desk",
+          "dmxPairIdx": 41,
+          "groupName": "Work Work Desk"
+        },
+        {
+          "id": 3,
+          "name": "Door",
+          "dmxPairIdx": 40,
+          "groupName": "Door"
+        }
+      ],
+      "roomPresets": {
+        "All On": {
+          "dimmerGroupLevels": {
+            "Electronics Bench": 1024,
+            "Main Desk": 1024,
+            "Work Work Desk": 1024,
+            "Door": 1024
+          }
+        },
+        "Dim": {
+          "dimmerGroupLevels": {
+            "Electronics Bench": 10,
+            "Main Desk": 10,
+            "Work Work Desk": 10,
+            "Door": 10
+          }
+        },
+        "All Off (MAN)": {
+          "dimmerGroupLevels": {
+            "Electronics Bench": 0,
+            "Main Desk": 0,
+            "Work Work Desk": 0,
+            "Door": 0
+          }
+        },
+        "All Off (AUTO)": {
+          "dimmerGroupLevels": {
+            "Electronics Bench": 0,
+            "Main Desk": 0,
+            "Work Work Desk": 0,
+            "Door": 0
+          }
+        },
+        "Main Desk": {
+          "dimmerGroupLevels": {
+            "Main Desk": 1024
+          }
+        },
+        "Work Work": {
+          "dimmerGroupLevels": {
+            "Work Work Desk": 1024
+          }
+        },
+        "Electronics + Programming": {
+          "dimmerGroupLevels": {
+            "Main Desk": 1024,
+            "Electronics Bench": 1024
+          }
+        }
+      }
     }
   ]
 }
