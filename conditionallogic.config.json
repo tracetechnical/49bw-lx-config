@@ -1943,7 +1943,7 @@
           }
         },
         "output": {
-          "mqttTopic": "lighting/room/Master Bedroom/preset",
+          "mqttTopic": "lighting/room/Alex Office/preset",
           "onValue": "All On",
           "offValue": "",
           "remoteUpdateSubject": {
@@ -2005,7 +2005,7 @@
           }
         },
         "output": {
-          "mqttTopic": "lighting/room/Master Bedroom/preset",
+          "mqttTopic": "lighting/room/Alex Office/preset",
           "onValue": "All Off (MAN)",
           "offValue": "",
           "remoteUpdateSubject": {
