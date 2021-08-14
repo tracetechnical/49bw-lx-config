@@ -1915,7 +1915,7 @@
         "inputs": {
           "input1": {
             "name": "SW1",
-            "mqttTopic": "lighting/switch/22/short",
+            "mqttTopic": "lighting/switch/33/short",
             "regexString": ".*",
             "matchingGroupId": 0,
             "validityWindowMilliseconds": 10,
@@ -1963,7 +1963,7 @@
         "inputs": {
           "input1": {
             "name": "SW2",
-            "mqttTopic": "lighting/switch/23/short",
+            "mqttTopic": "lighting/switch/34/short",
             "regexString": ".*",
             "matchingGroupId": 0,
             "validityWindowMilliseconds": 1000,
