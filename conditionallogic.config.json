@@ -2017,6 +2017,103 @@
           "setMillis": 0
         },
         "type": "OR"
+      },
+
+      {
+        "row": 1,
+        "col": 0,
+        "name": "Alex Office Switch PS_ON2",
+        "inputs": {
+          "input1": {
+            "name": "SW1",
+            "mqttTopic": "lighting/switch/33/short",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 10,
+            "trueValue": "2",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input2": {
+            "name": "Speech On",
+            "mqttTopic": "speech",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 1000,
+            "trueValue": "alex office programming",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Alex Office/preset",
+          "onValue": "Electro Prog",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "OR"
+      },
+      {
+        "row": 2,
+        "col": 0,
+        "name": "Alex Office Switch PS_ON3",
+        "inputs": {
+          "input1": {
+            "name": "SW1",
+            "mqttTopic": "lighting/switch/33/short",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 10,
+            "trueValue": "3",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input2": {
+            "name": "Speech On",
+            "mqttTopic": "speech",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 1000,
+            "trueValue": "alex office work work",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Alex Office/preset",
+          "onValue": "Work Work",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "OR"
       }
     ]
   }
