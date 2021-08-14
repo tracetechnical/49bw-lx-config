@@ -1507,7 +1507,7 @@
   {
     "name": "master_bedroom",
     "blocks": [
-       {
+      {
         "row": 0,
         "col": 0,
         "name": "Master Bedroom Switch PS_ON1",
@@ -1555,7 +1555,7 @@
         },
         "type": "OR"
       },
-{
+      {
         "row": 0,
         "col": 1,
         "name": "Master Bedroom Switch PS_OFF1",
@@ -1904,5 +1904,118 @@
         "type": "AND"
       }
     ]
-  }
-]
+  },
+  {
+    "name": "alex_office",
+    "blocks": [
+      {
+        "row": 0,
+        "col": 0,
+        "name": "Alex Office Switch PS_ON1",
+        "inputs": {
+          "input1": {
+            "name": "SW1",
+            "mqttTopic": "lighting/switch/22/short",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 10,
+            "trueValue": "1",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input2": {
+            "name": "Speech On",
+            "mqttTopic": "speech",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 1000,
+            "trueValue": "alex office on",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Master Bedroom/preset",
+          "onValue": "All On",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "OR"
+      },
+      {
+        "row": 0,
+        "col": 1,
+        "name": "Alex Office Switch PS_OFF1",
+        "inputs": {
+          "input1": {
+            "name": "SW2",
+            "mqttTopic": "lighting/switch/23/short",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 1000,
+            "trueValue": "1",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input2": {
+            "name": "Speech Off",
+            "mqttTopic": "speech",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 1000,
+            "trueValue": "alex office off",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          },
+          "input3": {
+            "name": "Speech Off US",
+            "mqttTopic": "speech",
+            "regexString": ".*",
+            "matchingGroupId": 0,
+            "validityWindowMilliseconds": 1000,
+            "trueValue": "upstairs off",
+            "falseValue": "",
+            "lastFullInput": "",
+            "lastKnownValue": "",
+            "booleanValue": false,
+            "noValue": false,
+            "valid": false
+          }
+        },
+        "output": {
+          "mqttTopic": "lighting/room/Master Bedroom/preset",
+          "onValue": "All Off (MAN)",
+          "offValue": "",
+          "remoteUpdateSubject": {
+            "throwable": null
+          },
+          "lastValue": "",
+          "thisLastValue": "",
+          "setByThis": false,
+          "setMillis": 0
+        },
+        "type": "OR"
+      }
+    ]
