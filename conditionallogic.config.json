@@ -1359,7 +1359,7 @@
             "mqttTopic": "zigbee2mqtt/0x5c0272fffeafc557",
             "regexString": "\\\"action\\\":\\\"(.+)\\\",",
             "matchingGroupId": 1,
-            "validityWindowMilliseconds": 100,
+            "validityWindowMilliseconds": 1000,
             "trueValue": "toggle",
             "falseValue": "",
             "lastFullInput": "",
