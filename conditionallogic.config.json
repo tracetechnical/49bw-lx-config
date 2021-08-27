@@ -1357,11 +1357,11 @@
         "inputs": {
           "input1": {
             "name": "Lx1",
-            "mqttTopic": "alarm/output/1/state",
-            "regexString": ".*",
-            "matchingGroupId": 0,
+            "mqttTopic": "zigbee2mqtt/0x5c0272fffeafc557",
+            "regexString": "{\"action\":.+\"(.*)\"",
+            "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
-            "trueValue": "True",
+            "trueValue": "toggle",
             "falseValue": "",
             "lastFullInput": "",
             "lastKnownValue": "",
