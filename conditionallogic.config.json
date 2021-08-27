@@ -99,8 +99,7 @@
         "type": "OR"
       },
       {
-        "row": 0,
-        "col": 1,
+        "row": 0,        "col": 1,
         "name": "Living Room Switch PS_OFF1",
         "inputs": {
           "input1": {
@@ -1369,20 +1368,6 @@
             "noValue": false,
             "valid": false
           },
-          "input2": {
-            "name": "Lx2",
-            "mqttTopic": "alarm/output/1/state",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "False",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
           "isOff": {
             "name": "Off",
             "mqttTopic": "blocks/downstairs_off",
@@ -1424,7 +1409,7 @@
           "setByThis": false,
           "setMillis": 0
         },
-        "type": "TOGGLE_SWITCH"
+        "type": "FLIP_FLOP_SWITCH"
       },
       {
         "row": 3,
