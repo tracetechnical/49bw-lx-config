@@ -1358,7 +1358,7 @@
           "input1": {
             "name": "Lx1",
             "mqttTopic": "zigbee2mqtt/0x5c0272fffeafc557",
-            "regexString": "{\"action\":.+\"(.*)\"",
+            "regexString": "\{\"action\":.+\"(.*)\"",
             "matchingGroupId": 1,
             "validityWindowMilliseconds": 0,
             "trueValue": "toggle",
