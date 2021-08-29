@@ -1351,68 +1351,6 @@
       },
       {
         "row": 3,
-        "col": 0,
-        "name": "Dining Fob Toggle",
-        "inputs": {
-          "input1": {
-            "name": "Lx1",
-            "mqttTopic": "zigbee2mqtt/0x5c0272fffeafc557",
-            "regexString": "\\\"action\\\":\\\"(.+)\\\",",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 10,
-            "trueValue": "toggle",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "isOff": {
-            "name": "Dining",
-            "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "All Off",
-            "falseValue": "ANY",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "isOn": {
-            "name": "Dining",
-            "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "ANY",
-            "falseValue": "All Off",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Dining Room/preset",
-          "onValue": "All On",
-          "offValue": "All Off (MAN)",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "FLIP_FLOP_SWITCH"
-      },
-      {
-        "row": 3,
         "col": 1,
         "name": "Living Fob Toggle",
         "inputs": {
