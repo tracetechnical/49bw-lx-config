@@ -1,2043 +1,1481 @@
-[
-  {
-    "name": "living",
-    "blocks": [
-      {
-        "row": 0,
-        "col": 0,
-        "name": "Living Room Switch PS_ON1",
-        "inputs": {
-          "input1": {
-            "name": "SW1",
-            "mqttTopic": "lighting/switch/1/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+{
+  "blockList": [
+    {
+      "type": "BLOCK_OCCUPATION",
+      "inputs": {
+        "0": {
+          "topic": "texecom2mqtt/zone/upstairs_hall",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"status\":1,",
+            "groupIdx": 0
           },
-          "input2": {
-            "name": "Speech On",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "living room on",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Living Room/preset",
-          "onValue": "All On",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
+          "lastKnownValue": false
+        }
       },
-      {
-        "row": 1,
-        "col": 0,
-        "name": "Living Room Switch PS_ON2",
-        "inputs": {
-          "input1": {
-            "name": "SW1",
-            "mqttTopic": "lighting/switch/1/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "2",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Speech On",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "front porch on",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Porch/preset",
-          "onValue": "All On",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
-      },
-      {
-        "row": 0,        "col": 1,
-        "name": "Living Room Switch PS_OFF1",
-        "inputs": {
-          "input1": {
-            "name": "SW2",
-            "mqttTopic": "lighting/switch/2/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Speech Off",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "living room off",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "Speech Off DS",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "downstairs off",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Living Room/preset",
-          "onValue": "All Off (MAN)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
-      },
-      {
-        "row": 1,
-        "col": 1,
-        "name": "Living Room Switch PS_OFF2",
-        "inputs": {
-          "input1": {
-            "name": "SW1",
-            "mqttTopic": "lighting/switch/2/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "2",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Speech Off",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "front porch off",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "Speech Off DS",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "downstairs off",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Porch/preset",
-          "onValue": "All Off (MAN)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
-      },
-      {
-        "row": 2,
-        "col": 0,
-        "name": "Living Room Occupation On",
-        "inputs": {
-          "input1": {
-            "name": "Living PIR",
-            "mqttTopic": "texecom2mqtt/zone/living_room_pir",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "{\"name\":\"Living Room PIR\",\"number\":1,\"areas\":[\"A\"],\"status\":0,\"type\":\"Entry/Exit 2\"}",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
-          }
-        },
-        "output": {
-          "mqttTopic": "blocks/living_occupied",
-          "onValue": "1",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "delayMilliseconds": 1500,
-        "type": "ON_DELAY",
-        "stopMillis": 0
-      },
-      {
-        "row": 2,
-        "col": 1,
-        "name": "Living Room Occupation Off",
-        "inputs": {
-          "input1": {
-            "name": "Living PIR",
-            "mqttTopic": "texecom2mqtt/zone/living_room_pir",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
-          }
-        },
-        "output": {
-          "mqttTopic": "blocks/living_occupied",
-          "onValue": "",
-          "offValue": "0",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "delayMilliseconds": 900000,
-        "type": "OFF_DELAY",
-        "stopMillis": 1627069512367
-      },
-      {
-        "row": 2,
-        "col": 2,
-        "name": "Living Room Occupation Short",
-        "inputs": {
-          "input1": {
-            "name": "Living PIR",
-            "mqttTopic": "texecom2mqtt/zone/living_room_pir",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
-          }
-        },
-        "output": {
-          "mqttTopic": "blocks/living_occupied_short",
-          "onValue": "1",
-          "offValue": "0",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "delayMilliseconds": 300000,
-        "type": "OFF_DELAY",
-        "stopMillis": 1627069512367
-      },
-      {
-        "row": 3,
-        "col": 0,
-        "name": "Living Room Wakeup Not Night",
-        "inputs": {
-          "input1": {
-            "name": "Living is Off",
-            "mqttTopic": "lighting/room/Living Room/preset",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "All Off (AUTO)",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Living Occupied",
-            "mqttTopic": "blocks/living_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "NOT Night",
-            "mqttTopic": "timeOfDay/night",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
+      "gates": {
+        "0": {
+          "topic": "timeOfDay/night",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
             "trueValue": "false",
-            "falseValue": "true",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
+            "falseValue": "true"
+          },
+          "lastKnownValue": true
         },
-        "output": {
-          "mqttTopic": "lighting/room/Living Room/preset",
-          "onValue": "All On",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
-      },
-      {
-        "row": 4,
-        "col": 0,
-        "name": "Living Room Wakeup Night",
-        "inputs": {
-          "input1": {
-            "name": "Living is Off",
-            "mqttTopic": "lighting/room/Living Room/preset",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "All Off (AUTO)",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Living Occupied",
-            "mqttTopic": "blocks/living_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "Night",
-            "mqttTopic": "timeOfDay/night",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
+        "1": {
+          "topic": "timeOfDay/night",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
             "trueValue": "true",
-            "falseValue": "false",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Living Room/preset",
-          "onValue": "Dim",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
+            "falseValue": "false"
           },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
+          "lastKnownValue": false
+        }
       },
-      {
-        "row": 3,
-        "col": 1,
-        "name": "Living Room Unoccupied Not Night",
-        "inputs": {
-          "input1": {
-            "name": "Living Occupied",
-            "mqttTopic": "blocks/living_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "0",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "outputs": {
+        "0": {
+          "topic": "lighting/room/Hall/occupied",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "true",
+            "falseValue": "false"
+          }
+        }
+      },
+      "occupiedInput": {
+        "topic": "texecom2mqtt/zone/upstairs_hall",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"status\":1,",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "inputDay": {
+        "topic": "timeOfDay/night",
+        "transformer": {
+          "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "trueValue": "false",
+          "falseValue": "true"
+        },
+        "lastKnownValue": true
+      },
+      "inputNight": {
+        "topic": "timeOfDay/night",
+        "transformer": {
+          "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "trueValue": "true",
+          "falseValue": "false"
+        },
+        "lastKnownValue": false
+      },
+      "output": {
+        "topic": "lighting/room/Hall/occupied",
+        "transformer": {
+          "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+          "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+          "inputType": "Boolean",
+          "outputType": "String",
+          "trueValue": "true",
+          "falseValue": "false"
+        }
+      },
+      "delaySecsDay": 10,
+      "delaySecsNight": 5,
+      "in": "Boolean",
+      "out": "Boolean"
+    },
+    {
+      "type": "BLOCK_DAY_NIGHT_WAKE",
+      "inputs": {
+        "0": {
+          "topic": "lighting/room/Hall/occupied",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
           },
-          "input2": {
-            "name": "Living",
-            "mqttTopic": "lighting/room/Living Room/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "ANY",
-            "falseValue": "All Off",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "NOT Night",
-            "mqttTopic": "timeOfDay/night",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
+          "lastKnownValue": false
+        }
+      },
+      "gates": {
+        "0": {
+          "topic": "timeOfDay/night",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
             "trueValue": "false",
-            "falseValue": "true",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
+            "falseValue": "true"
+          },
+          "lastKnownValue": true
         },
-        "output": {
-          "mqttTopic": "lighting/room/Living Room/preset",
-          "onValue": "All Off (AUTO)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
-      },
-      {
-        "row": 4,
-        "col": 1,
-        "name": "Living Room Unoccupied Night",
-        "inputs": {
-          "input1": {
-            "name": "Living Occupied",
-            "mqttTopic": "blocks/living_occupied_short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "0",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Living",
-            "mqttTopic": "lighting/room/Living Room/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "ANY",
-            "falseValue": "All Off",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "Night",
-            "mqttTopic": "timeOfDay/night",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
+        "1": {
+          "topic": "timeOfDay/night",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
             "trueValue": "true",
-            "falseValue": "false",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Living Room/preset",
-          "onValue": "All Off (AUTO)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
+            "falseValue": "false"
           },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
-      }
-    ]
-  },
-  {
-    "name": "dining",
-    "blocks": [
-      {
-        "row": 0,
-        "col": 0,
-        "name": "Dining Room Switch PS_ON1",
-        "inputs": {
-          "input1": {
-            "name": "SW1",
-            "mqttTopic": "lighting/switch/3/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Speech On",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "dining room on",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Dining Room/preset",
-          "onValue": "All On",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
+          "lastKnownValue": false
+        }
       },
-      {
-        "row": 1,
-        "col": 0,
-        "name": "Dining Room Switch PS_ON2",
-        "inputs": {
-          "input1": {
-            "name": "SW1",
-            "mqttTopic": "lighting/switch/3/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10,
-            "trueValue": "2",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Speech Dinner",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "dining room dinner",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "outputs": {
+        "0": {
+          "topic": "lighting/room/Hall/preset",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "All On",
+            "falseValue": "All Off (AUTO)"
           }
         },
-        "output": {
-          "mqttTopic": "lighting/room/Dining Room/preset",
-          "onValue": "Dinner",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
-      },
-      {
-        "row": 0,
-        "col": 1,
-        "name": "Dining Room Switch PS_OFF1",
-        "inputs": {
-          "input1": {
-            "name": "SW2",
-            "mqttTopic": "lighting/switch/4/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Speech Off",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "dining room off",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "Speech Off DS",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "downstairs off",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+        "1": {
+          "topic": "lighting/room/Hall/preset",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "Dim",
+            "falseValue": "All Off (AUTO)"
           }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Dining Room/preset",
-          "onValue": "All Off (MAN)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
+        }
       },
-      {
-        "row": 2,
-        "col": 0,
-        "name": "Dining Room Occupation On",
-        "inputs": {
-          "input1": {
-            "name": "Dining PIR",
-            "mqttTopic": "texecom2mqtt/zone/dining_room_pir",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "{\"name\":\"Dining Room PIR\",\"number\":2,\"areas\":[\"A\"],\"status\":0,\"type\":\"Entry/Exit 2\"}",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
-          }
+      "occupiedInput": {
+        "topic": "lighting/room/Hall/occupied",
+        "transformer": {
+          "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "trueValue": "true",
+          "falseValue": "false"
         },
-        "output": {
-          "mqttTopic": "blocks/dining_occupied",
-          "onValue": "1",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "delayMilliseconds": 1500,
-        "type": "ON_DELAY",
-        "stopMillis": 0
+        "lastKnownValue": false
       },
-      {
-        "row": 2,
-        "col": 1,
-        "name": "Dining Room Occupation Off",
-        "inputs": {
-          "input1": {
-            "name": "Dining PIR",
-            "mqttTopic": "texecom2mqtt/zone/dining_room_pir",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
-          }
+      "inputDay": {
+        "topic": "timeOfDay/night",
+        "transformer": {
+          "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "trueValue": "false",
+          "falseValue": "true"
         },
-        "output": {
-          "mqttTopic": "blocks/dining_occupied",
-          "onValue": "",
-          "offValue": "0",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "delayMilliseconds": 900000,
-        "type": "OFF_DELAY",
-        "stopMillis": 1627069512368
+        "lastKnownValue": true
       },
-      {
-        "row": 2,
-        "col": 2,
-        "name": "Dining Room Occupation Short",
-        "inputs": {
-          "input1": {
-            "name": "Dining PIR",
-            "mqttTopic": "texecom2mqtt/zone/dining_room_pir",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
-          }
+      "inputNight": {
+        "topic": "timeOfDay/night",
+        "transformer": {
+          "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "trueValue": "true",
+          "falseValue": "false"
         },
-        "output": {
-          "mqttTopic": "blocks/dining_occupied_short",
-          "onValue": "1",
-          "offValue": "0",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "delayMilliseconds": 300000,
-        "type": "OFF_DELAY",
-        "stopMillis": 1627069512368
+        "lastKnownValue": false
       },
-      {
-        "row": 3,
-        "col": 0,
-        "name": "Dining Room Wakeup Not Night",
-        "inputs": {
-          "input1": {
-            "name": "Dining is Off",
-            "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "All Off (AUTO)",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "outputDay": {
+        "topic": "lighting/room/Hall/preset",
+        "transformer": {
+          "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+          "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+          "inputType": "Boolean",
+          "outputType": "String",
+          "trueValue": "All On",
+          "falseValue": "All Off (AUTO)"
+        }
+      },
+      "outputNight": {
+        "topic": "lighting/room/Hall/preset",
+        "transformer": {
+          "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+          "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+          "inputType": "Boolean",
+          "outputType": "String",
+          "trueValue": "Dim",
+          "falseValue": "All Off (AUTO)"
+        }
+      },
+      "in": "Boolean",
+      "out": "Boolean"
+    },
+    {
+      "type": "BLOCK_COPY",
+      "inputs": {
+        "0": {
+          "topic": "dave",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
           },
-          "input2": {
-            "name": "Dining Occupied",
-            "mqttTopic": "blocks/dining_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "NOT Night",
-            "mqttTopic": "timeOfDay/night",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
+          "lastKnownValue": "fdgfdgdfg"
+        }
+      },
+      "gates": {
+        "0": {
+          "topic": "timeOfDay/night",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
             "trueValue": "false",
-            "falseValue": "true",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Dining Room/preset",
-          "onValue": "All On",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
+            "falseValue": "true"
           },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
+          "lastKnownValue": true
+        }
       },
-      {
-        "row": 4,
-        "col": 0,
-        "name": "Dining Room Wakeup Night",
-        "inputs": {
-          "input1": {
-            "name": "Dining is Off",
-            "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "All Off (AUTO)",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Dining Occupied",
-            "mqttTopic": "blocks/dining_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "Night",
-            "mqttTopic": "timeOfDay/night",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "true",
-            "falseValue": "false",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "outputs": {
+        "1": {
+          "topic": "Jim",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
           }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Dining Room/preset",
-          "onValue": "Dim",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
+        }
       },
-      {
-        "row": 3,
-        "col": 1,
-        "name": "Dining Room Unoccupied Not Night",
-        "inputs": {
-          "input1": {
-            "name": "Dining Occupied",
-            "mqttTopic": "blocks/dining_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "0",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Dining",
-            "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "ANY",
-            "falseValue": "All Off",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "NOT Night",
-            "mqttTopic": "timeOfDay/night",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
+      "inputList": {
+        "topic": "dave",
+        "transformer": {
+          "type": "TRANSFORMER_THRU",
+          "transformerType": "TRANSFORMER_THRU",
+          "inputType": "String",
+          "outputType": "String"
+        },
+        "lastKnownValue": "fdgfdgdfg"
+      },
+      "gateList": {
+        "0": {
+          "topic": "timeOfDay/night",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
             "trueValue": "false",
-            "falseValue": "true",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Dining Room/preset",
-          "onValue": "All Off (AUTO)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
+            "falseValue": "true"
           },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
+          "lastKnownValue": true
+        }
       },
-      {
-        "row": 4,
-        "col": 1,
-        "name": "Dining Room Unoccupied Night",
-        "inputs": {
-          "input1": {
-            "name": "Dining Occupied Short",
-            "mqttTopic": "blocks/dining_occupied_short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "0",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "outputList": {
+        "1": {
+          "topic": "Jim",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          }
+        }
+      },
+      "in": "String",
+      "out": "String"
+    },
+    {
+      "type": "BLOCK_DIMMER_SWITCH",
+      "inputs": {
+        "1": {
+          "topic": "lighting/dimmerGroup/22/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
           },
-          "input2": {
-            "name": "Dining",
-            "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "ANY",
-            "falseValue": "All Off",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+          "lastKnownValue": ""
+        }
+      },
+      "gates": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"brightness_up_hold\",",
+            "groupIdx": 0
           },
-          "input3": {
-            "name": "Night",
-            "mqttTopic": "timeOfDay/night",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
+          "lastKnownValue": false
+        },
+        "1": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"brightness_down_hold\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        },
+        "2": {
+          "topic": "alexRBut",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
             "trueValue": "true",
-            "falseValue": "false",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Dining Room/preset",
-          "onValue": "All Off (AUTO)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
+            "falseValue": "false"
           },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
-      }
-    ]
-  },
-  {
-    "name": "downstairs",
-    "blocks": [
-      {
-        "row": 0,
-        "col": 0,
-        "name": "Front Door Welcome Home On",
-        "inputs": {
-          "input1": {
-            "name": "Front Door Contact",
-            "mqttTopic": "texecom2mqtt/zone/front_door",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "{\"name\":\"Front Door\",\"number\":40,\"areas\":[\"A\"],\"status\":0,\"type\":\"Entry/Exit 1\"}",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
-          }
-        },
-        "output": {
-          "mqttTopic": "blocks/welcome_home",
-          "onValue": "1",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
+          "lastKnownValue": false
+        }
       },
-      {
-        "row": 0,
-        "col": 1,
-        "name": "Front Door Welcome Home Off",
-        "inputs": {
-          "input1": {
-            "name": "Front Door Contact",
-            "mqttTopic": "texecom2mqtt/zone/front_door",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "{\"name\":\"Front Door\",\"number\":40,\"areas\":[\"A\"],\"status\":0,\"type\":\"Entry/Exit 1\"}",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
+      "outputs": {
+        "1": {
+          "topic": "lighting/dimmerGroup/22/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
           }
-        },
-        "output": {
-          "mqttTopic": "blocks/welcome_home",
-          "onValue": "1",
-          "offValue": "0",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "delayMilliseconds": 180000,
-        "type": "OFF_DELAY",
-        "stopMillis": 1627068792369
+        }
       },
-      {
-        "row": 1,
-        "col": 0,
-        "name": "Welcome Home Light On",
-        "inputs": {
-          "input1": {
-            "name": "Welcome Home",
-            "mqttTopic": "blocks/welcome_home",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "dimValues": {
+        "1": {
+          "topic": "lighting/dimmerGroup/22/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
           },
-          "input2": {
-            "name": "Is Off Auto",
-            "mqttTopic": "lighting/room/Porch/preset",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "All Off (AUTO)",
-            "falseValue": "ANY",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Porch/preset",
-          "onValue": "All On",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
+          "lastKnownValue": ""
+        }
       },
-      {
-        "row": 1,
-        "col": 1,
-        "name": "Welcome Home Light Off",
-        "inputs": {
-          "input1": {
-            "name": "Welcome Home Active",
-            "mqttTopic": "blocks/welcome_home",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "0",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
+      "upInput": {
+        "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"brightness_up_hold\",",
+          "groupIdx": 0
         },
-        "output": {
-          "mqttTopic": "lighting/room/Porch/preset",
-          "onValue": "All Off (AUTO)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
+        "lastKnownValue": false
       },
-      {
-        "row": 2,
-        "col": 0,
-        "name": "Any light on Downstairs",
-        "inputs": {
-          "input1": {
-            "name": "Living",
-            "mqttTopic": "lighting/room/Living Room/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "ANY",
-            "falseValue": "All Off",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Dining",
-            "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "ANY",
-            "falseValue": "All Off",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
+      "downInput": {
+        "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"brightness_down_hold\",",
+          "groupIdx": 0
         },
-        "output": {
-          "mqttTopic": "blocks/downstairs_on",
-          "onValue": "1",
-          "offValue": "0",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
+        "lastKnownValue": false
       },
-      {
-        "row": 2,
-        "col": 1,
-        "name": "All lights off Downstairs",
-        "inputs": {
-          "input1": {
-            "name": "Living",
-            "mqttTopic": "lighting/room/Living Room/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "All Off",
-            "falseValue": "ANY",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Dining",
-            "mqttTopic": "lighting/room/Dining Room/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "All Off",
-            "falseValue": "ANY",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "blocks/downstairs_off",
-          "onValue": "1",
-          "offValue": "0",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
+      "upOneshot": false,
+      "downOneshot": false,
+      "updateLockout": false,
+      "currentValues": {
+        "1": ""
       },
-      {
-        "row": 3,
-        "col": 1,
-        "name": "Living Fob Toggle",
-        "inputs": {
-          "input1": {
-            "name": "Lx1",
-            "mqttTopic": "alarm/output/1/state",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "True",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Lx2",
-            "mqttTopic": "alarm/output/1/state",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "False",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "isOff": {
-            "name": "Off Follow",
-            "mqttTopic": "blocks/downstairs_off",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "isOn": {
-            "name": "On Follow",
-            "mqttTopic": "blocks/downstairs_on",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Living Room/preset",
-          "onValue": "All On",
-          "offValue": "All Off (MAN)",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "TOGGLE_SWITCH"
-      }
-    ]
-  },
-  {
-    "name": "master_bedroom",
-    "blocks": [
-      {
-        "row": 0,
-        "col": 0,
-        "name": "Master Bedroom Switch PS_ON1",
-        "inputs": {
-          "input1": {
-            "name": "SW1",
-            "mqttTopic": "lighting/switch/7/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Speech On",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "master bedroom on",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Master Bedroom/preset",
-          "onValue": "All On",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
+      "currentDimValues": {
+        "1": 0
       },
-      {
-        "row": 0,
-        "col": 1,
-        "name": "Master Bedroom Switch PS_OFF1",
-        "inputs": {
-          "input1": {
-            "name": "SW2",
-            "mqttTopic": "lighting/switch/8/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "in": "String",
+      "out": "String"
+    },
+    {
+      "type": "BLOCK_DIMMER_SWITCH",
+      "inputs": {
+        "1": {
+          "topic": "lighting/dimmerGroup/25/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
           },
-          "input2": {
-            "name": "Speech Off",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "master bedroom off",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+          "lastKnownValue": ""
+        }
+      },
+      "gates": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"brightness_up_hold\",",
+            "groupIdx": 0
           },
-          "input3": {
-            "name": "Speech Off US",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "upstairs off",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+          "lastKnownValue": false
+        },
+        "1": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"brightness_down_hold\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        },
+        "2": {
+          "topic": "alexLBut",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
+          },
+          "lastKnownValue": false
+        }
+      },
+      "outputs": {
+        "1": {
+          "topic": "lighting/dimmerGroup/25/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          }
+        }
+      },
+      "dimValues": {
+        "1": {
+          "topic": "lighting/dimmerGroup/25/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          },
+          "lastKnownValue": ""
+        }
+      },
+      "upInput": {
+        "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"brightness_up_hold\",",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "downInput": {
+        "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"brightness_down_hold\",",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "upOneshot": false,
+      "downOneshot": false,
+      "updateLockout": false,
+      "currentValues": {
+        "1": ""
+      },
+      "currentDimValues": {
+        "1": 0
+      },
+      "in": "String",
+      "out": "String"
+    },
+    {
+      "type": "BLOCK_DIMMER_SWITCH",
+      "inputs": {
+        "1": {
+          "topic": "lighting/dimmerGroup/22/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          },
+          "lastKnownValue": ""
+        },
+        "2": {
+          "topic": "lighting/dimmerGroup/25/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          },
+          "lastKnownValue": ""
+        }
+      },
+      "gates": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"brightness_up_hold\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        },
+        "1": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"brightness_down_hold\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        },
+        "2": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
+          },
+          "lastKnownValue": false
+        }
+      },
+      "outputs": {
+        "1": {
+          "topic": "lighting/dimmerGroup/22/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
           }
         },
-        "output": {
-          "mqttTopic": "lighting/room/Master Bedroom/preset",
-          "onValue": "All Off (MAN)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
+        "2": {
+          "topic": "lighting/dimmerGroup/25/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          }
+        }
       },
-      {
-        "row": 1,
-        "col": 0,
-        "name": "Ensuite Occupied (Shower Mode - Long Off)",
-        "inputs": {
-          "input1": {
-            "name": "Master Ensuite PIR",
-            "mqttTopic": "texecom2mqtt/zone/master_ensuite",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
+      "dimValues": {
+        "1": {
+          "topic": "lighting/dimmerGroup/22/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          },
+          "lastKnownValue": ""
+        },
+        "2": {
+          "topic": "lighting/dimmerGroup/25/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          },
+          "lastKnownValue": ""
+        }
+      },
+      "upInput": {
+        "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"brightness_up_hold\",",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "downInput": {
+        "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"brightness_down_hold\",",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "upOneshot": false,
+      "downOneshot": false,
+      "updateLockout": false,
+      "currentValues": {
+        "1": "",
+        "2": ""
+      },
+      "currentDimValues": {
+        "1": 0,
+        "2": 0
+      },
+      "in": "String",
+      "out": "String"
+    },
+    {
+      "type": "BLOCK_TOGGLE_SWITCH",
+      "inputs": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"toggle\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        }
+      },
+      "gates": {
+        "0": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
+          },
+          "lastKnownValue": false
+        }
+      },
+      "outputs": {
+        "0": {
+          "topic": "lighting/room/Alex Office/preset",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "All On",
+            "falseValue": "All Off (AUTO)"
+          }
+        }
+      },
+      "inputList": {
+        "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"toggle\",",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "gateList": {
+        "0": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
+          },
+          "lastKnownValue": false
+        }
+      },
+      "outputList": {
+        "0": {
+          "topic": "lighting/room/Alex Office/preset",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "All On",
+            "falseValue": "All Off (AUTO)"
+          }
+        }
+      },
+      "inputDoesNotChange": true,
+      "oneShot": false,
+      "currentState": false,
+      "in": "Boolean",
+      "out": "Boolean"
+    },
+    {
+      "type": "BLOCK_TOGGLE_SWITCH",
+      "inputs": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"toggle\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        }
+      },
+      "gates": {
+        "0": {
+          "topic": "alexRBut",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
+          },
+          "lastKnownValue": false
+        }
+      },
+      "outputs": {
+        "0": {
+          "topic": "lighting/dimmerGroup/22/level",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "1024",
+            "falseValue": "0"
+          }
+        }
+      },
+      "inputList": {
+        "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"toggle\",",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "gateList": {
+        "0": {
+          "topic": "alexRBut",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
+          },
+          "lastKnownValue": false
+        }
+      },
+      "outputList": {
+        "0": {
+          "topic": "lighting/dimmerGroup/22/level",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "1024",
+            "falseValue": "0"
+          }
+        }
+      },
+      "inputDoesNotChange": true,
+      "oneShot": false,
+      "currentState": false,
+      "in": "Boolean",
+      "out": "Boolean"
+    },
+    {
+      "type": "BLOCK_TOGGLE_SWITCH",
+      "inputs": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"toggle\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        }
+      },
+      "gates": {
+        "0": {
+          "topic": "alexLBut",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
+          },
+          "lastKnownValue": false
+        }
+      },
+      "outputs": {
+        "0": {
+          "topic": "lighting/dimmerGroup/25/level",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "1024",
+            "falseValue": "0"
+          }
+        }
+      },
+      "inputList": {
+        "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"toggle\",",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "gateList": {
+        "0": {
+          "topic": "alexLBut",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
+          },
+          "lastKnownValue": false
+        }
+      },
+      "outputList": {
+        "0": {
+          "topic": "lighting/dimmerGroup/25/level",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "1024",
+            "falseValue": "0"
+          }
+        }
+      },
+      "inputDoesNotChange": true,
+      "oneShot": false,
+      "currentState": false,
+      "in": "Boolean",
+      "out": "Boolean"
+    },
+    {
+      "type": "BLOCK_DIMMER_SWITCH",
+      "inputs": {
+        "1": {
+          "topic": "lighting/dimmerGroup/19/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          },
+          "lastKnownValue": ""
+        }
+      },
+      "gates": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeb1b9c6",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"rotate_left\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        },
+        "1": {
+          "topic": "zigbee2mqtt/0x5c0272fffeb1b9c6",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"rotate_right\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        },
+        "2": null
+      },
+      "outputs": {
+        "1": {
+          "topic": "lighting/dimmerGroup/19/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          }
+        }
+      },
+      "dimValues": {
+        "1": {
+          "topic": "lighting/dimmerGroup/19/level",
+          "transformer": {
+            "type": "TRANSFORMER_THRU",
+            "transformerType": "TRANSFORMER_THRU",
+            "inputType": "String",
+            "outputType": "String"
+          },
+          "lastKnownValue": ""
+        }
+      },
+      "upInput": {
+        "topic": "zigbee2mqtt/0x5c0272fffeb1b9c6",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"rotate_left\",",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "downInput": {
+        "topic": "zigbee2mqtt/0x5c0272fffeb1b9c6",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"rotate_right\",",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "upOneshot": false,
+      "downOneshot": false,
+      "updateLockout": false,
+      "currentValues": {
+        "1": "0"
+      },
+      "currentDimValues": {
+        "1": 0
+      },
+      "in": "String",
+      "out": "String"
+    },
+    {
+      "type": "BLOCK_TOGGLE_SWITCH",
+      "inputs": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeb1b9c6",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"play_pause\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        }
+      },
+      "gates": {},
+      "outputs": {
+        "0": {
+          "topic": "lighting/dimmerGroup/19/level",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "1024",
+            "falseValue": "0"
+          }
+        }
+      },
+      "inputList": {
+        "topic": "zigbee2mqtt/0x5c0272fffeb1b9c6",
+        "transformer": {
+          "type": "TRANSFORMER_REGEX_MATCH",
+          "transformerType": "TRANSFORMER_REGEX_MATCH",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "regexString": ".+\"action\":\"play_pause\",",
+          "groupIdx": 0
+        },
+        "lastKnownValue": false
+      },
+      "gateList": {},
+      "outputList": {
+        "0": {
+          "topic": "lighting/dimmerGroup/19/level",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "1024",
+            "falseValue": "0"
+          }
+        }
+      },
+      "inputDoesNotChange": true,
+      "oneShot": false,
+      "currentState": false,
+      "in": "Boolean",
+      "out": "Boolean"
+    },
+    {
+      "type": "BLOCK_AND",
+      "inputs": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"arrow_left_hold\",",
+            "groupIdx": 0
+          },
+          "lastKnownValue": false
+        }
+      },
+      "gates": {},
+      "outputs": {
+        "0": {
+          "topic": "alexLBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "true",
+            "falseValue": "NONE"
           }
         },
-        "output": {
-          "mqttTopic": "blocks/master_ensuite_occupied",
-          "onValue": "1",
-          "offValue": "0",
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "delayMilliseconds": 600000,
-        "type": "OFF_DELAY",
-        "stopMillis": 1627068792369
-      },
-      {
-        "row": 1,
-        "col": 1,
-        "name": "Ensuite Occupied (Short Off)",
-        "inputs": {
-          "input1": {
-            "name": "Master Ensuite PIR",
-            "mqttTopic": "texecom2mqtt/zone/master_ensuite",
-            "regexString": "\"status\":(.{1})",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "",
-            "lastKnownValue": "0",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": true
-          }
-        },
-        "output": {
-          "mqttTopic": "blocks/master_ensuite_occupied_short",
-          "onValue": "1",
-          "offValue": "0",
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "delayMilliseconds": 60000,
-        "type": "OFF_DELAY",
-        "stopMillis": 1627068792369
-      },
-      {
-        "row": 1,
-        "col": 2,
-        "name": "Bathroom Not Occupied",
-        "inputs": {
-          "input1": {
-            "name": "Not Occupied",
-            "mqttTopic": "blocks/master_ensuite_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10000,
-            "trueValue": "0",
-            "falseValue": "1",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Master Ensuite/preset",
-          "onValue": "All Off (AUTO)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
-      },
-      {
-        "row": 2,
-        "col": 0,
-        "name": "Day Bathroom",
-        "inputs": {
-          "input1": {
-            "name": "Occupied",
-            "mqttTopic": "blocks/master_ensuite_occupied",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "NOT Night",
-            "mqttTopic": "timeOfDay/night",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
+        "1": {
+          "topic": "alexRBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
             "trueValue": "false",
-            "falseValue": "true",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "In Auto",
-            "mqttTopic": "lighting/room/Master Ensuite/preset",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "All Off (AUTO)",
-            "falseValue": "ANY",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+            "falseValue": "NONE"
           }
         },
-        "output": {
-          "mqttTopic": "lighting/room/Master Ensuite/preset",
-          "onValue": "All On",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
+        "2": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
+        }
       },
-      {
-        "row": 2,
-        "col": 1,
-        "name": "Night Bathroom",
-        "inputs": {
-          "input1": {
-            "name": "Occupied",
-            "mqttTopic": "blocks/master_ensuite_occupied_short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10000,
-            "trueValue": "1",
-            "falseValue": "0",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "inputList": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"arrow_left_hold\",",
+            "groupIdx": 0
           },
-          "input2": {
-            "name": "Night",
-            "mqttTopic": "timeOfDay/night",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
+          "lastKnownValue": false
+        }
+      },
+      "outputList": {
+        "0": {
+          "topic": "alexLBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
             "trueValue": "true",
-            "falseValue": "false",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "In Auto",
-            "mqttTopic": "lighting/room/Master Ensuite/preset",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "All Off (AUTO)",
-            "falseValue": "ANY",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+            "falseValue": "NONE"
           }
         },
-        "output": {
-          "mqttTopic": "lighting/room/Master Ensuite/preset",
-          "onValue": "Night Toilet",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
+        "1": {
+          "topic": "alexRBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
         },
-        "type": "AND"
+        "2": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
+        }
       },
-      {
-        "row": 2,
-        "col": 2,
-        "name": "Night Bathroom End",
-        "inputs": {
-          "input1": {
-            "name": "NOT Occupied",
-            "mqttTopic": "blocks/master_ensuite_occupied_short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10000,
-            "trueValue": "0",
-            "falseValue": "1",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "in": "Boolean",
+      "out": "Boolean"
+    },
+    {
+      "type": "BLOCK_AND",
+      "inputs": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"arrow_right_hold\",",
+            "groupIdx": 0
           },
-          "input2": {
-            "name": "Dining",
-            "mqttTopic": "lighting/room/Master Ensuite/preset",
-            "regexString": "([a-zA-Z]+(?:\\s{1}[a-zA-Z]+)?)(\\s\\(.*\\))?",
-            "matchingGroupId": 1,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "ANY",
-            "falseValue": "All Off",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "In Night Preset",
-            "mqttTopic": "lighting/room/Master Ensuite/preset",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 0,
-            "trueValue": "Night Toilet",
-            "falseValue": "ANY",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Master Ensuite/preset",
-          "onValue": "All Off (AUTO)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "AND"
-      }
-    ]
-  },
-  {
-    "name": "alex_office",
-    "blocks": [
-      {
-        "row": 0,
-        "col": 0,
-        "name": "Alex Office Switch PS_ON1",
-        "inputs": {
-          "input1": {
-            "name": "SW1",
-            "mqttTopic": "lighting/switch/33/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Speech On",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "alex office on",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Alex Office/preset",
-          "onValue": "All On",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
+          "lastKnownValue": false
+        }
       },
-      {
-        "row": 0,
-        "col": 1,
-        "name": "Alex Office Switch PS_OFF1",
-        "inputs": {
-          "input1": {
-            "name": "SW2",
-            "mqttTopic": "lighting/switch/34/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "1",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Speech Off",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "alex office off",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input3": {
-            "name": "Speech Off US",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "upstairs off",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "gates": {},
+      "outputs": {
+        "0": {
+          "topic": "alexRBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "true",
+            "falseValue": "NONE"
           }
         },
-        "output": {
-          "mqttTopic": "lighting/room/Alex Office/preset",
-          "onValue": "All Off (MAN)",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
+        "1": {
+          "topic": "alexLBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
         },
-        "type": "OR"
+        "2": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
+        }
       },
-
-      {
-        "row": 1,
-        "col": 0,
-        "name": "Alex Office Switch PS_ON2",
-        "inputs": {
-          "input1": {
-            "name": "SW1",
-            "mqttTopic": "lighting/switch/33/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10,
-            "trueValue": "2",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "inputList": {
+        "0": {
+          "topic": "zigbee2mqtt/0x5c0272fffeafc557",
+          "transformer": {
+            "type": "TRANSFORMER_REGEX_MATCH",
+            "transformerType": "TRANSFORMER_REGEX_MATCH",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "regexString": ".+\"action\":\"arrow_right_hold\",",
+            "groupIdx": 0
           },
-          "input2": {
-            "name": "Speech On",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "alex office programming",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          }
-        },
-        "output": {
-          "mqttTopic": "lighting/room/Alex Office/preset",
-          "onValue": "Electro Prog",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
-        },
-        "type": "OR"
+          "lastKnownValue": false
+        }
       },
-      {
-        "row": 2,
-        "col": 0,
-        "name": "Alex Office Switch PS_ON3",
-        "inputs": {
-          "input1": {
-            "name": "SW1",
-            "mqttTopic": "lighting/switch/33/short",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 10,
-            "trueValue": "3",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
-          },
-          "input2": {
-            "name": "Speech On",
-            "mqttTopic": "speech",
-            "regexString": ".*",
-            "matchingGroupId": 0,
-            "validityWindowMilliseconds": 1000,
-            "trueValue": "alex office work work",
-            "falseValue": "",
-            "lastFullInput": "",
-            "lastKnownValue": "",
-            "booleanValue": false,
-            "noValue": false,
-            "valid": false
+      "outputList": {
+        "0": {
+          "topic": "alexRBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "true",
+            "falseValue": "NONE"
           }
         },
-        "output": {
-          "mqttTopic": "lighting/room/Alex Office/preset",
-          "onValue": "Work Work",
-          "offValue": "",
-          "remoteUpdateSubject": {
-            "throwable": null
-          },
-          "lastValue": "",
-          "thisLastValue": "",
-          "setByThis": false,
-          "setMillis": 0
+        "1": {
+          "topic": "alexLBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
         },
-        "type": "OR"
-      }
-    ]
-  }
-]
+        "2": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
+        }
+      },
+      "in": "Boolean",
+      "out": "Boolean"
+    },
+    {
+      "type": "BLOCK_ON_DELAY",
+      "inputs": {
+        "0": {
+          "topic": "alexLBut",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
+          },
+          "lastKnownValue": false
+        }
+      },
+      "gates": {},
+      "outputs": {
+        "0": {
+          "topic": "alexLBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
+        },
+        "1": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "true",
+            "falseValue": "NONE"
+          }
+        }
+      },
+      "inputList": {
+        "topic": "alexLBut",
+        "transformer": {
+          "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "trueValue": "true",
+          "falseValue": "false"
+        },
+        "lastKnownValue": false
+      },
+      "outputList": {
+        "0": {
+          "topic": "alexLBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
+        },
+        "1": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "true",
+            "falseValue": "NONE"
+          }
+        }
+      },
+      "delayMilliseconds": 20000,
+      "stopMillis": 0,
+      "timerRunning": false,
+      "oneShot": false,
+      "in": "Boolean",
+      "out": "Boolean"
+    },
+    {
+      "type": "BLOCK_ON_DELAY",
+      "inputs": {
+        "0": {
+          "topic": "alexRBut",
+          "transformer": {
+            "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+            "inputType": "String",
+            "outputType": "Boolean",
+            "trueValue": "true",
+            "falseValue": "false"
+          },
+          "lastKnownValue": false
+        }
+      },
+      "gates": {},
+      "outputs": {
+        "0": {
+          "topic": "alexRBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
+        },
+        "1": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "true",
+            "falseValue": "NONE"
+          }
+        }
+      },
+      "inputList": {
+        "topic": "alexRBut",
+        "transformer": {
+          "type": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "transformerType": "TRANSFORMER_STRING_TO_BOOLEAN",
+          "inputType": "String",
+          "outputType": "Boolean",
+          "trueValue": "true",
+          "falseValue": "false"
+        },
+        "lastKnownValue": false
+      },
+      "outputList": {
+        "0": {
+          "topic": "alexRBut",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "false",
+            "falseValue": "NONE"
+          }
+        },
+        "1": {
+          "topic": "alexNone",
+          "transformer": {
+            "type": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "transformerType": "TRANSFORMER_BOOLEAN_TO_STRING",
+            "inputType": "Boolean",
+            "outputType": "String",
+            "trueValue": "true",
+            "falseValue": "NONE"
+          }
+        }
+      },
+      "delayMilliseconds": 20000,
+      "stopMillis": 0,
+      "timerRunning": false,
+      "oneShot": false,
+      "in": "Boolean",
+      "out": "Boolean"
+    }
+  ]
+}
